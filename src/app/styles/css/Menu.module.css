@@ -1,0 +1,42 @@
+.menu {
+  position: absolute;
+  z-index: 1;
+  top: 92px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 92px);
+  opacity: 0.7;
+  background: #000000;
+  color: #ffffff;
+}
+
+.menu.on {
+  display: block;
+  animation: slide-fade-in-dropdown-animation 0.4s ease;
+}
+
+.menu.off {
+  top: 0px;
+  animation: slide-fade-out-dropdown-animation 0.4s ease;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-fade-in-dropdown-animation {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-fade-out-dropdown-animation {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
