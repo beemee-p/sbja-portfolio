@@ -11,6 +11,19 @@
 }
 
 .logo {
+  color: #000000;
   font-weight: 500;
   font-size: 1.5rem;
+  text-decoration: none;
+}
+.logo:hover {
+  opacity: 0.6;
+}
+
+.menuBtn {
+  cursor: pointer;
+}
+
+.menuBtn:hover {
+  opacity: 0.6;
 }
