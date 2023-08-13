@@ -1,12 +1,14 @@
-import React, { ReactElement } from "react";
-import Link from "next/link";
+import styles from "@/app/styles/css/Header.module.css";
+import { ReactElement } from "react";
+import { AiOutlineMenu } from "react-icons/ai";
 
 const Header = (): ReactElement => {
   return (
-    <nav style={{ background: "powderblue" }}>
-      <h2>
-        This is Header <Link href="https://devbirdfeet.tistory.com/">🐣</Link>
-      </h2>
+    <nav className={styles.header}>
+      <div className={styles.logo}>SBJA 🐣</div>
+      <div className={styles.hamburgerButton}>
+        <AiOutlineMenu size={"24"} color={"#000000"} />
+      </div>
     </nav>
   );
 };
