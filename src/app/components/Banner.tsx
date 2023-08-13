@@ -1,5 +1,5 @@
-import React, { ReactElement } from "react";
 import Image from "next/image";
+import { ReactElement } from "react";
 
 const Banner = (): ReactElement => {
   return (
