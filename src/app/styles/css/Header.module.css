@@ -17,6 +17,17 @@
   font-size: 1.5rem;
   text-decoration: none;
 }
+
+.logo.on {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+}
+
+.logo.on:hover {
+  opacity: 1;
+}
+
 .logo:hover {
   opacity: 0.6;
 }
@@ -30,6 +41,12 @@
 
 .menu_btn:hover {
   opacity: 0.6;
+}
+
+.menu_btn.on {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
 }
 
 .menu_icon {
