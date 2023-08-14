@@ -1,13 +1,14 @@
 .menu {
   position: absolute;
   z-index: 1;
-  top: 92px;
+  top: 0;
   left: 0;
   width: 100%;
-  height: calc(100vh - 92px);
+  height: 100vh;
   opacity: 0.7;
-  background: #000000;
   color: #ffffff;
+  background: #000000;
+  padding-top: 92px;
 }
 
 .menu.on {
@@ -39,4 +40,15 @@
   100% {
     transform: translateY(-100%);
   }
+}
+
+.menu_list {
+  padding: 24px;
+}
+
+.menu_item {
+  margin-bottom: 20px;
+  list-style-type: none;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
