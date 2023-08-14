@@ -1,21 +1,48 @@
 import { ReactElement } from "react";
 import styles from "@/app/styles/css/Menu.module.css";
+import Link from "next/link";
+import { TbExternalLink } from "react-icons/tb";
 
-const menuList = ["포트폴리오", "블로그"];
+const menuList = [
+  { title: "PORTFOLIO", url: `/portfolio/2` },
+  {
+    title: (
+      <>
+        BLOG <TbExternalLink />
+      </>
+    ),
+    url: `https://devbirdfeet.tistory.com`,
+  },
+  {
+    title: (
+      <>
+        GITHUB <TbExternalLink />
+      </>
+    ),
+    url: `https://github.com/beemee-p`,
+  },
+];
 interface MenuProps {
   isMenu: boolean;
+  close: () => void;
 }
 
 const Menu = (props: MenuProps): ReactElement => {
+  function handleClose(e: React.MouseEvent<HTMLElement>) {
+    props.close();
+  }
   return (
-    <div className={`${styles.menu} ${props.isMenu ? styles.on : styles.off}`}>
-      <ul className={styles.menu_list}>
+    <div
+      className={`${styles.menu} ${props.isMenu ? styles.on : styles.off}`}
+      onClick={(e) => handleClose(e)}
+    >
+      <div className={styles.menu_list}>
         {menuList.map((menu, index) => (
-          <li key={index} className={styles.menu_item}>
-            {menu}
-          </li>
+          <Link key={index} className={styles.menu_item} href={menu.url}>
+            {menu.title}
+          </Link>
         ))}
-      </ul>
+      </div>
     </div>
   );
 };

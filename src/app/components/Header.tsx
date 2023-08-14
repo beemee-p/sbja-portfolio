@@ -2,7 +2,7 @@
 import styles from "@/app/styles/css/Header.module.css";
 import Link from "next/link";
 import { ReactElement, useState } from "react";
-import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
 import Menu from "./Menu";
 
 const Header = (): ReactElement => {
@@ -31,7 +31,7 @@ const Header = (): ReactElement => {
             color={`${isMenu ? "#ffffff" : "#000000"} `}
           />
         </div>
-        <Menu isMenu={isMenu} />
+        <Menu isMenu={isMenu} close={() => setIsMenu(false)} />
       </nav>
     </>
   );
