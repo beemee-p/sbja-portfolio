@@ -1,16 +1,30 @@
-import Image from "next/image";
 import { ReactElement } from "react";
+import styles from "@/app/styles/css/Banner.module.css";
 
 const Banner = (): ReactElement => {
   return (
-    <section>
-      <Image
-        src="/images/banner-test.png"
-        alt="banner-test"
-        width={500}
-        height={300}
-        priority={true}
-      />
+    <section className={styles.banner}>
+      <video
+        id="background-video"
+        className={styles.video}
+        autoPlay
+        loop
+        muted
+        poster="https://assets.codepen.io/6093409/river.jpg"
+      >
+        <source
+          src="https://assets.codepen.io/6093409/river.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      <h1 className={styles.title}>
+        Calm, Inspiration,
+        <br />
+        and more from
+        <br />
+        the Hype community
+      </h1>
     </section>
   );
 };
