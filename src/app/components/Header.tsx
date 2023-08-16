@@ -1,9 +1,9 @@
 "use client";
-import styles from "@/app/styles/css/Header.module.css";
-import Link from "next/link";
 import { ReactElement, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
+import Link from "next/link";
 import Menu from "./Menu";
+import styles from "@/app/styles/css/Header.module.css";
 
 const Header = (): ReactElement => {
   const [isMenu, setIsMenu] = useState(false);
