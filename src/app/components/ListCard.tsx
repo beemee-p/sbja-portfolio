@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { Post } from "../types";
-import { getFormattedDate } from "../../../lib/getFormattedDate";
+import { getFormattedDate } from "@/lib/getFormattedDate";
 import Link from "next/link";
 
 interface ListCardProps {

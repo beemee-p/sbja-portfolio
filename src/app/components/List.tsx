@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
+import { getSortedPostsData } from "@/lib/posts";
 import styles from "@/app/styles/css/List.module.css";
-import { getSortedPostsData } from "../../../lib/posts";
 import ListCard from "./ListCard";
 
 const List = (): ReactElement => {
