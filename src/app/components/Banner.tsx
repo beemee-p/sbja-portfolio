@@ -19,11 +19,10 @@ const Banner = (): ReactElement => {
       </video>
 
       <h1 className={styles.title}>
-        Calm, Inspiration,
+        Calm, Focus,
         <br />
-        and more from
+        and more Inspiration
         <br />
-        the Hype community
       </h1>
     </section>
   );
