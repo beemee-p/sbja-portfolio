@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { getSortedPostsData } from "@lib/posts";
+import { getSortedPostsData } from "@lib/posts.cjs";
 import styles from "@/app/styles/css/List.module.css";
 import ListCard from "./ListCard";
 

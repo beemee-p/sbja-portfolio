@@ -4,7 +4,7 @@ import * as path from "path";
 const __dirname = path.resolve();
 
 const nextConfig = {
-  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
+  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx", "cjs"],
   experimental: {
     appDir: true,
     serverActions: true,
