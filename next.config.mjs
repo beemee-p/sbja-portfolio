@@ -11,15 +11,17 @@ const nextConfig = {
     mdxRs: true,
   },
 
-  webpack(config, { isServer }) {
+  webpack(config) {
     config.resolve.alias = {
       ...config.resolve.alias,
       "@api": path.resolve(__dirname, "src/app/api"),
       "@styles": path.resolve(__dirname, "src/app/styles"),
       "@components": path.resolve(__dirname, "src/components"),
       "@posts": path.resolve(__dirname, "src/posts"),
-      "@lib": path.resolve(__dirname, "src/lib"),
+      // "@lib": path.resolve(__dirname, "src/lib"),
     };
+
+    config.resolve.alias["@lib"] = path.join(__dirname, "src/lib");
 
     return config;
   },
