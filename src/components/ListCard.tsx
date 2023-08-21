@@ -13,7 +13,7 @@ const ListCard = (props: ListCardProps): ReactElement => {
 
   return (
     <li>
-      <Link href={`/post/${id}`}>{title}</Link>
+      <Link href={`/portfolio/${id}`}>{title}</Link>
       <p>{createdAt}</p>
     </li>
   );
