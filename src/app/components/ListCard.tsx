@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import { Post } from "../types";
+import { Post } from "@/app/types";
 import { getFormattedDate } from "@lib/getFormattedDate";
 import Link from "next/link";
 

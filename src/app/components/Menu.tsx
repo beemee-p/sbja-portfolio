@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
-import styles from "@/app/styles/css/Menu.module.css";
-import Link from "next/link";
 import { TbExternalLink } from "react-icons/tb";
+import Link from "next/link";
+import styles from "@/app/styles/css/Menu.module.css";
 
 const menuList = [
   { title: "PORTFOLIO", url: `/portfolio/2` },

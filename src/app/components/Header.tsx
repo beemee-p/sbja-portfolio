@@ -2,7 +2,7 @@
 import { ReactElement, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
-import Menu from "./Menu";
+import Menu from "@/app/components/Menu";
 import styles from "@/app/styles/css/Header.module.css";
 
 const Header = (): ReactElement => {
