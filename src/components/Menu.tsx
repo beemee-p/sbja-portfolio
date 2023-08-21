@@ -1,10 +1,11 @@
-import { ReactElement } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
 import styles from "@/styles/css/Menu.module.css";
+import { useRouter } from "next/router";
 
 const menuList = [
-  { title: "PORTFOLIO", url: `/portfolio/2` },
+  { title: "PORTFOLIO", url: `/portfolio` },
   {
     title: (
       <>
@@ -31,6 +32,7 @@ const Menu = (props: MenuProps): ReactElement => {
   function handleClose(e: React.MouseEvent<HTMLElement>) {
     props.close();
   }
+
   return (
     <div
       className={`${styles.menu} ${props.isMenu ? styles.on : styles.off}`}
