@@ -2,8 +2,8 @@
 import { ReactElement, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
-import Menu from "@/app/components/Menu";
-import styles from "@/app/styles/css/Header.module.css";
+import Menu from "@/components/Menu";
+import styles from "@/styles/css/Header.module.css";
 
 const Header = (): ReactElement => {
   const [isMenu, setIsMenu] = useState(false);

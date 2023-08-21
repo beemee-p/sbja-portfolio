@@ -1,5 +1,5 @@
-import Banner from "./components/Banner";
-import List from "./components/List";
+import List from "@/components/List";
+import Banner from "@/components/Banner";
 
 export default function Home() {
   return (

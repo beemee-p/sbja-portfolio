@@ -1,5 +1,5 @@
 import { ReactElement } from "react";
-import styles from "@/app/styles/css/Banner.module.css";
+import styles from "@/styles/css/Banner.module.css";
 
 const Banner = (): ReactElement => {
   return (
