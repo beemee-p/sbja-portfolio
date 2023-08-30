@@ -24,12 +24,13 @@ const PortfolioDetail = async ({
   const { portfolioID } = params;
   const posts = getSortedPostsData();
 
-  console.log("posts,", posts, portfolioID);
   if (!posts.find((post) => post.id === portfolioID)) {
     return NotFound();
   }
 
-  const { title, date, contentHtml } = await getPostData(portfolioID);
+  const { title, date, thumbnail, contentHtml } = await getPostData(
+    portfolioID
+  );
   const pubDate = getFormattedDate(date);
 
   return (
