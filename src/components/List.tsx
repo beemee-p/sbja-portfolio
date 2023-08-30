@@ -10,7 +10,7 @@ const List = (): ReactElement => {
     <div className={styles.list}>
       <h1 className={styles.h1}>MUST READ</h1>
 
-      <ul>
+      <ul className={styles.ul}>
         {posts.map((post) => (
           <ListCard key={post.id} post={post} />
         ))}
