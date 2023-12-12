@@ -25,8 +25,10 @@ const ListCard = (props: ListCardProps): ReactElement => {
           />
         )}
 
-        <div>{title}</div>
-        <p>{createdAt}</p>
+        <div className={styles.list_card_text}>
+          <h3 className={styles.list_card_title}>{title}</h3>
+          <p className={styles.list_card_createdAt}>{createdAt}</p>
+        </div>
       </Link>
     </li>
   );
