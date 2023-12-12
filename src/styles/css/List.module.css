@@ -5,10 +5,3 @@
 .h1 {
   font-size: 3rem;
 }
-
-.ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex-basis: 33%;
-}
