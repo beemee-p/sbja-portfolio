@@ -12,9 +12,9 @@ const List = (): ReactElement => {
       <h1 className={styles.h1}>MUST READ</h1>
 
       <GridList
-        itemPerLine={4}
-        rowSpacing={10}
-        columnSpacing={10}
+        itemPerLine={3}
+        rowSpacing={20}
+        columnSpacing={40}
         direction={"row"}
       >
         {posts.map((post) => (

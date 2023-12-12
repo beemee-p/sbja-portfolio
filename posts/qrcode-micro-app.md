@@ -1,7 +1,7 @@
 ---
 title: "Building a QR code micro-app"
 date: "2021-08-14"
-thumbnail: "/images/chat-m.png"
+thumbnail: "/images/portfolio-thumbnail03.webp"
 ---
 
 Ever since the pandemic started, I've noticed QR codes creeping into my daily life. Venue check-ins, digital menus at restaurants, and online payments.

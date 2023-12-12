@@ -1,7 +1,7 @@
 ---
 title: "Wolfhunter: A PICO-8 RPG"
 date: "2020-12-22"
-thumbnail: "/images/chat-m.png"
+thumbnail: "/images/portfolio-thumbnail07.gif"
 ---
 
 In a [previous post](./retro-games-with-pico-8) I talked about how making retro 8-bit games is a great way for fledgling developers to learn new things whilst expanding their portfolio.

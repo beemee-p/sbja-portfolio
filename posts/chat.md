@@ -1,7 +1,7 @@
 ---
 title: "Chat"
 date: "2020-12-19"
-thumbnail: "/images/chat-m.png"
+thumbnail: "/images/portfolio-thumbnail01.webp"
 ---
 
 ### **✔️ 개요**

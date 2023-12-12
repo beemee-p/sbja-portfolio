@@ -14,9 +14,15 @@ const ListCard = (props: ListCardProps): ReactElement => {
 
   return (
     <li className={styles.list_card}>
-      <Link href={`/portfolio/${id}`}>
+      <Link className={styles.list_card_link} href={`/portfolio/${id}`}>
         {thumbnail && (
-          <Image alt="thumbnail" src={thumbnail} width={100} height={100} />
+          <Image
+            className={styles.list_card_img}
+            alt="thumbnail"
+            src={thumbnail}
+            style={{ width: "100%", height: "100%" }}
+            fill={true}
+          />
         )}
 
         <div>{title}</div>

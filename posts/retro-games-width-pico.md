@@ -1,7 +1,7 @@
 ---
 title: "Create retro games with PICO-8"
 date: "2020-12-19"
-thumbnail: "/images/chat-m.png"
+thumbnail: "/images/portfolio-thumbnail04.webp"
 ---
 
 After watching [High Score](https://www.youtube.com/watch?v=B4jopG1wX88) on Netflix, I was suddenly inspired to develop a retro-style game. I think it was a combination of the aesthetics and nostalgia that motivated me.
