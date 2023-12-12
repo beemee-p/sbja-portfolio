@@ -5,12 +5,32 @@
   height: 100%;
 }
 
-.list_link {
-  text-decoration: underline;
+.list_card_link {
+  text-decoration: none;
 }
 
 .list_card_img {
   position: unset !important;
   max-width: 500px;
   max-height: 400px;
+}
+
+.list_card_text {
+}
+
+.list_card_title {
+  color: #000000;
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.list_card_createdAt {
+  color: #999;
+  font-size: 0.81rem;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1rem;
+  margin: 0;
 }
