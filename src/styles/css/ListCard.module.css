@@ -3,14 +3,14 @@
   list-style-type: none;
   width: 100%;
   height: 100%;
-  /* position: relative; */
 }
 
 .list_link {
-  /* position: relative; */
   text-decoration: underline;
 }
 
 .list_card_img {
   position: unset !important;
+  max-width: 500px;
+  max-height: 400px;
 }

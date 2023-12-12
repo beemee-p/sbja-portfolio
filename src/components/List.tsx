@@ -2,7 +2,7 @@ import { ReactElement } from "react";
 import { getSortedPostsData } from "@/library/posts";
 import styles from "@/styles/css/List.module.css";
 import ListCard from "@/components/ListCard";
-import GridList from "./common/GridList";
+import Grid from "./common/Grid";
 
 const List = (): ReactElement => {
   const posts = getSortedPostsData();
@@ -11,7 +11,7 @@ const List = (): ReactElement => {
     <div className={styles.list}>
       <h1 className={styles.h1}>MUST READ</h1>
 
-      <GridList
+      <Grid
         itemPerLine={3}
         rowSpacing={20}
         columnSpacing={40}
@@ -20,7 +20,7 @@ const List = (): ReactElement => {
         {posts.map((post) => (
           <ListCard key={post.id} post={post} />
         ))}
-      </GridList>
+      </Grid>
     </div>
   );
 };

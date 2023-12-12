@@ -1,8 +1,8 @@
 "use client";
 import { ReactElement, ReactNode, useEffect } from "react";
-import styles from "@/styles/css/common/GridList.module.css";
+import styles from "@/styles/css/common/Grid.module.css";
 
-interface GridListProps {
+interface GridProps {
   children: ReactNode;
   itemPerLine: number;
   rowSpacing?: number;
@@ -10,7 +10,7 @@ interface GridListProps {
   direction?: "column" | "row";
 }
 
-const GridList = (props: GridListProps): ReactElement => {
+const Grid = (props: GridProps): ReactElement => {
   const rowMargin = props.rowSpacing || 0;
   const columnMargin = props.columnSpacing || 0;
   const restRowWidth = Math.floor(rowMargin / props.itemPerLine);
@@ -52,4 +52,4 @@ const GridList = (props: GridListProps): ReactElement => {
   return <div className={`grid ${styles.grid}`}>{props.children}</div>;
 };
 
-export default GridList;
+export default Grid;
