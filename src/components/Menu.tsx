@@ -17,6 +17,14 @@ const menuList = [
   {
     title: (
       <>
+        RESUME <TbExternalLink />
+      </>
+    ),
+    url: `https://beemeep.notion.site/yuna-park-3043560342374634a8c051c4b8bbfe4c?pvs=4`,
+  },
+  {
+    title: (
+      <>
         GITHUB <TbExternalLink />
       </>
     ),
@@ -40,7 +48,12 @@ const Menu = (props: MenuProps): ReactElement => {
     >
       <div className={styles.menu_list}>
         {menuList.map((menu, index) => (
-          <Link key={index} className={styles.menu_item} href={menu.url}>
+          <Link
+            key={index}
+            className={styles.menu_item}
+            href={menu.url}
+            target="_blank"
+          >
             {menu.title}
           </Link>
         ))}
