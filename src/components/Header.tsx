@@ -9,7 +9,7 @@ const Header = (): ReactElement => {
   const [isMenu, setIsMenu] = useState(false);
 
   return (
-    <nav className={styles.header}>
+    <header className={styles.header}>
       <Link
         className={`${styles.logo} ${isMenu ? styles.on : styles.off}`}
         onClick={() => isMenu && setIsMenu(false)}
@@ -23,6 +23,7 @@ const Header = (): ReactElement => {
         onClick={() => setIsMenu(!isMenu)}
       >
         {isMenu ? "CLOSE" : "MENU"}
+
         <AiOutlineMenu
           className={styles.menu_icon}
           size={"24"}
@@ -31,7 +32,7 @@ const Header = (): ReactElement => {
       </div>
 
       {isMenu && <Menu isMenu={isMenu} close={() => setIsMenu(false)} />}
-    </nav>
+    </header>
   );
 };
 
