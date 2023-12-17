@@ -6,7 +6,6 @@
   align-items: center;
   width: 100%;
   height: calc(100vh - 92px);
-  margin-bottom: 160px;
 }
 
 .video {
@@ -27,6 +26,32 @@
   letter-spacing: -0.03em;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   color: #ffffff;
+}
+
+.icon_wrap {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 30px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  animation: motion 0.4s linear infinite alternate;
+}
+
+.icon:first-child {
+  position: absolute;
+  bottom: 14px;
+  opacity: 0.5;
+}
+
+@keyframes motion {
+  0% {
+    margin-bottom: 0px;
+  }
+  100% {
+    margin-bottom: 6px;
+  }
 }
 
 @media (max-width: 1024px) {

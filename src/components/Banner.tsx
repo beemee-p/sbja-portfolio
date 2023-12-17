@@ -1,7 +1,17 @@
+"use client";
 import { ReactElement } from "react";
+import { SlArrowDown } from "react-icons/sl";
 import styles from "@/styles/css/Banner.module.css";
 
 const Banner = (): ReactElement => {
+  function handleMoveScroll() {
+    const list = document.querySelector(".list-wrap") as HTMLDivElement | null;
+    list?.scrollIntoView({ behavior: "smooth" });
+
+    const offset: number | undefined = (list?.offsetTop as number) - 93;
+    window.scrollTo({ top: offset, behavior: "smooth" });
+  }
+
   return (
     <section className={styles.banner}>
       <video
@@ -24,6 +34,11 @@ const Banner = (): ReactElement => {
         and more Inspiration
         <br />
       </h1>
+
+      <button className={styles.icon_wrap} onClick={handleMoveScroll}>
+        <SlArrowDown className={styles.icon} size={"30"} color={"#ffffff"} />
+        <SlArrowDown className={styles.icon} size={"30"} color={"#ffffff"} />
+      </button>
     </section>
   );
 };
