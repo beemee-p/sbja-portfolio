@@ -2,6 +2,12 @@ import { getFormattedDate } from "@/library/getFormattedDate";
 import { getPostData, getSortedPostsData } from "@/library/posts";
 import Link from "next/link";
 import NotFound from "@/app/portfolio/[portfolioID]/not-found";
+import styles from "@/styles/css/PortfolioDetail.module.css";
+
+export function generateStaticParams() {
+  const posts = getSortedPostsData();
+  return posts.map((portfolio) => ({ portfolioID: portfolio.id }));
+}
 
 const generateMetaData = ({ params }: { params: { portfolioID: string } }) => {
   const { portfolioID } = params;
@@ -13,6 +19,7 @@ const generateMetaData = ({ params }: { params: { portfolioID: string } }) => {
       title: "Post Not Found",
     };
   }
+
   return { title: post?.title };
 };
 
@@ -31,10 +38,11 @@ const PortfolioDetail = async ({
   const { title, date, thumbnail, contentHtml } = await getPostData(
     portfolioID
   );
+
   const pubDate = getFormattedDate(date);
 
   return (
-    <div>
+    <div className={styles.detail_wrap}>
       <h1>{title}</h1>
       <p>{pubDate}</p>
 

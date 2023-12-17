@@ -6,11 +6,12 @@
 }
 
 .list_card_link {
+  position: relative;
   text-decoration: none;
 }
 
 .list_card_img {
-  position: unset !important;
+  position: relative !important;
   max-width: 500px;
   max-height: 400px;
 }
