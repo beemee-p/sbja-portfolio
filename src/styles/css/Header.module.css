@@ -32,6 +32,15 @@
   opacity: 0.6;
 }
 
+.back_btn {
+  position: absolute;
+  left: 24px;
+}
+
+.back_btn:hover {
+  opacity: 0.6;
+}
+
 .menu_btn {
   display: flex;
   flex-direction: row;
