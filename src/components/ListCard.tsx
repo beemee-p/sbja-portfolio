@@ -17,10 +17,7 @@ const ListCard = (props: ListCardProps): ReactElement => {
 
   return (
     <li className={styles.list_card}>
-      <Link
-        className={styles.list_card_link}
-        href={{ pathname: `/portfolio/${id}` }}
-      >
+      <Link className={styles.list_card_link} href={`/portfolio/${id}`}>
         {thumbnail && (
           <Image
             className={styles.list_card_img}
