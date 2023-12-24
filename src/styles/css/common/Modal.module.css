@@ -1,0 +1,59 @@
+.modal_outer {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  overflow: auto;
+}
+
+.modal_wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.modal_inner {
+  background: #fff;
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  width: 80%;
+  height: min-content;
+  min-height: 101vh;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 48px auto;
+}
+
+.modal_inner::-webkit-scrollbar-corner {
+  background-color: inherit;
+}
+.modal_inner::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.modal_inner::-webkit-scrollbar-thumb {
+  background-color: #bfc6d2;
+  border-radius: 4px;
+}
+.modal_inner::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
+.modal_close_btn {
+  position: absolute;
+  top: 24px;
+  right: 14px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.modal_close_btn:hover {
+  opacity: 0.6;
+}
