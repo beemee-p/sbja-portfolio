@@ -1,4 +1,4 @@
-import { ReactElement, useState } from "react";
+import { ReactElement } from "react";
 import { getSortedPostsData } from "@/library/posts";
 import styles from "@/styles/css/List.module.css";
 import ListCard from "@/components/ListCard";
@@ -10,7 +10,6 @@ const List = (): ReactElement => {
   return (
     <div className={`list-wrap ${styles.list_wrap}`}>
       <h1 className={styles.h1}>MUST READ</h1>
-
       <Grid
         itemPerLine={3}
         rowSpacing={20}
