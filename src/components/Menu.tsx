@@ -2,7 +2,6 @@ import { ReactElement, useEffect, useState } from "react";
 import { TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
 import styles from "@/styles/css/Menu.module.css";
-import { useRouter } from "next/router";
 
 interface MenuProps {
   isMenu: boolean;

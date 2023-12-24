@@ -1,7 +1,7 @@
 import React from "react";
 import Modal from "@/components/common/Modal";
 import { getFormattedDate } from "@/library/getFormattedDate";
-import { getPostData, getSortedPostsData } from "@/library/posts";
+import { getPostData } from "@/library/posts";
 import styles from "@/styles/css/PortfolioModal.module.css";
 
 const PortfolioModal = async ({

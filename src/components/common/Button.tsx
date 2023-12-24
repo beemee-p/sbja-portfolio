@@ -1,11 +1,9 @@
 "use client";
-
 import React, {
   ButtonHTMLAttributes,
   MouseEventHandler,
   ReactNode,
 } from "react";
-import styles from "@/styles/css/common/Button.module.css";
 
 interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
