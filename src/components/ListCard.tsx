@@ -5,7 +5,6 @@ import { Post } from "@/app/types";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/css/ListCard.module.css";
-import { usePathname } from "next/navigation";
 
 interface ListCardProps {
   post: Post;
