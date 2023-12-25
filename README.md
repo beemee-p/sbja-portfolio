@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 새발개발자 포트폴리오
 
-## Getting Started
+## 개요
+- 새발개발자 포트폴리오 웹사이트입니다
+- Next.js 를 사용하여 그간의 코드 작업물들을 볼 수 있습니다
 
-First, run the development server:
+## 기술 스택
+- Next.js
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 페이지 구성
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- List
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/2cc47f20-4741-46a3-bd2e-78411ed82eda)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+- Detail - Page
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/3d873da2-1611-42c0-9c46-6b2a05d28a32)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+- Detail - Modal
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/d9cf42f5-9730-49b9-857c-185e68d8753e)
+![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/2cd0b862-c848-4791-8ed9-49dbf1f0400c)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## 디렉터리 구성
+
+app
+├── @modal
+│   └── (.)portfolio
+│         └── [portfolioID]
+│                └── page.tsx
+│   
+├── _app.js
+├── layout.tsx
+├── page.tsx
+├── portfolio
+│   └── [portfolioID]
+│       ├── not-found.tsx
+│       └── page.tsx
+└── types.d.ts
+
+
+components
+├── Banner.tsx
+├── Footer.tsx
+├── Header.tsx
+├── List.tsx
+├── ListCard.tsx
+├── Menu.tsx
+└── common
+       ├── Button.tsx
+       ├── Grid.tsx
+       ├── Modal.tsx
+       └── VideoPlayer.tsx
+
+
+
+## REF. 
+- [Vogue Korea](https://www.vogue.co.kr/)
+- [Dribble](https://dribbble.com/)
+- [Notefolio](https://notefolio.net/)
+  
