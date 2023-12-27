@@ -17,25 +17,26 @@
 }
 
 .modal_inner {
-  background: #fff;
   position: absolute;
   z-index: 200;
   top: 0;
-  width: 80%;
+  width: 90%;
   height: min-content;
   min-height: 101vh;
   border-radius: 8px;
-  padding: 24px;
   margin: 48px auto;
 }
 
+/* scroll style */
 .modal_inner::-webkit-scrollbar-corner {
   background-color: inherit;
 }
+
 .modal_inner::-webkit-scrollbar {
   width: 5px;
   height: 5px;
 }
+
 .modal_inner::-webkit-scrollbar-thumb {
   background-color: #bfc6d2;
   border-radius: 4px;
