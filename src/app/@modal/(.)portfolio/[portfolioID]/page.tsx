@@ -1,9 +1,10 @@
 import React from "react";
-import Modal from "@/components/common/Modal";
 import { getFormattedDate } from "@/library/getFormattedDate";
 import { getPostData } from "@/library/posts";
-import styles from "@/styles/css/PortfolioModal.module.css";
+import Modal from "@/components/common/Modal";
 import VideoPlayer from "@/components/common/VideoPlayer";
+import styles from "@/styles/css/PortfolioModal.module.css";
+import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
 
 const PortfolioModal = async ({
   params,
@@ -28,13 +29,16 @@ const PortfolioModal = async ({
 
   return (
     <Modal disableBodyScroll>
-      <div className={styles.modal_content}>
-        <div className={styles.modal_title_wrap}>
-          <h2 className={styles.modal_title}>{title}</h2>
+      <div className={styles.modal_content_wrap}>
+        <div className={styles.modal_content}>
+          <div className={styles.modal_title_wrap}>
+            <h2 className={styles.modal_title}>{title}</h2>
+          </div>
+
+          <VideoPlayer src={portfolio} />
         </div>
 
-        {/* <section dangerouslySetInnerHTML={{ __html: contentHtml }} /> */}
-        <VideoPlayer src={portfolio} />
+        <PortfolioInfo contents={contentHtml} />
       </div>
     </Modal>
   );
