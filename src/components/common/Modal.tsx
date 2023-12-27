@@ -13,20 +13,17 @@ import Button from "./Button";
 
 const DISABLED_SCROLL_CLASSNAME = "disabled_scroll";
 
-export interface ModalProps
-  extends Omit<HTMLAttributes<HTMLDivElement>, "children" | "content"> {
-  header?: ReactNode;
-  content?: ReactNode;
-  footer?: ReactNode;
+export interface ModalProps {
+  children: React.ReactNode;
+  disableBodyScroll: boolean;
+  closeIcon?: boolean;
 }
 
 const Modal = ({
   children,
   disableBodyScroll = true,
-}: {
-  children: React.ReactNode;
-  disableBodyScroll: boolean;
-}) => {
+  closeIcon = false,
+}: ModalProps) => {
   const router = useRouter();
   const clickedRef = useRef<EventTarget>();
 
@@ -127,9 +124,14 @@ const Modal = ({
         >
           {children}
 
-          <Button className={styles.modal_close_btn} onClick={handleClickClose}>
-            <AiOutlineClose size={"24"} color="#000000" />
-          </Button>
+          {closeIcon && (
+            <Button
+              className={styles.modal_close_btn}
+              onClick={handleClickClose}
+            >
+              <AiOutlineClose size={"24"} color="#000000" />
+            </Button>
+          )}
         </div>
       </div>
     </div>

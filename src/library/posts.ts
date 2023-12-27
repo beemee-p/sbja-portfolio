@@ -54,6 +54,5 @@ export async function getPostData(id: string) {
     videos: matterRes.data.videos,
   };
 
-  // Combine the data with the id
   return blogPostWithHTML;
 }
