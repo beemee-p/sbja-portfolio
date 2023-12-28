@@ -8,27 +8,32 @@
 - Next.js
 
 
-## 페이지 구성
+## 페이지 구성 (하단 Reference 이미지 참고)
 
 - Main
+헤더 / 비디오 / 리스트 / 푸터
 
 ![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/2cc47f20-4741-46a3-bd2e-78411ed82eda)
 
 
 
 - Detail - Page
+헤더 / 포스팅 / 푸터
+페이지 형식으로 구성
 
 ![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/3d873da2-1611-42c0-9c46-6b2a05d28a32)
 
 
 
 - Detail - Modal
+모달 형식으로 구성(interrupt route)
 
 ![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/d9cf42f5-9730-49b9-857c-185e68d8753e)
-
 ![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/2cd0b862-c848-4791-8ed9-49dbf1f0400c)
 
-## 배포 스케줄 
+
+
+## 배포 스케줄
 
 **Dec 3rd (12/11 - 12/17)** 
 
@@ -47,7 +52,7 @@
 **Dec 5th (12/25 - 12/31)**
 
 - 포트폴리오 3차
-    - 모달 ui 업데이트
+    - ~~모달 ui 업데이트~~
     - PORTFOLIO 모델 리팩토링
 
 **Jan 1st (01/01 - 01/07)**
