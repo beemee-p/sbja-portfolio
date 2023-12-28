@@ -19,6 +19,7 @@ const PortfolioInfo = (props: PortfolioInfoProps): ReactElement => {
         className={styles.info_content}
         dangerouslySetInnerHTML={{ __html: props.contents }}
       />
+
       <Button
         className={styles.info_close_btn}
         onClick={() => setShowInfo(false)}
