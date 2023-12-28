@@ -16,8 +16,8 @@ features:
   ]
 skills: ["React", "Redux", "TypeScript", "Styled-component"]
 period: ["2020-12-19", "2020-12-20"]
-images?: ["/images/portfolio-thumbnail01.webp"]
-videos?: ["/videos/portfolio-chat.mov"]
+images: ["/images/portfolio-thumbnail01.webp"]
+videos: ["/videos/portfolio-chat.mov"]
 ---
 
 #### **✔️ 개요**

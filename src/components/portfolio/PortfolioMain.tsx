@@ -18,7 +18,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
     <div className={styles.main_content}>
       <div className={styles.main_head}>
         <h2 className={styles.main_title}>{props.portfolio.title}</h2>
-        <Button className={styles.main_info_icon} onClick={}>
+        <Button className={styles.main_info_icon} onClick={undefined}>
           <PiInfoBold size={"24"} color="#7C8484" />
         </Button>
       </div>

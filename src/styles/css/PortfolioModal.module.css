@@ -2,23 +2,3 @@
   display: flex;
   flex-direction: row;
 }
-
-.modal_content {
-  background: #fff;
-  margin-right: 20px;
-  overflow: auto;
-  border-radius: 8px;
-}
-
-.modal_content .modal_title_wrap {
-  padding: 24px;
-  border-bottom: 1px solid #e4e4e4;
-}
-
-.modal_content .modal_title {
-  margin: 0;
-  font-size: 28px;
-  line-height: 36px;
-  letter-spacing: -0.5px;
-  font-weight: 700;
-}

@@ -7,9 +7,9 @@ import React, {
 
 interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
-  className: string;
+  className?: string;
   children: ReactNode;
-  onClick: MouseEventHandler<HTMLButtonElement>;
+  onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
 const Button = ({ className, children, onClick }: ButtonProps) => {
