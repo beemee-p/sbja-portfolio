@@ -1,13 +1,12 @@
 "use client";
+
 import React from "react";
 import Image from "next/image";
 import VideoPlayer from "@/components/common/VideoPlayer";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
-import { Post } from "@/app/types";
-import { BsInfoCircle } from "react-icons/bs";
-import { TbInfoSquareRounded } from "react-icons/tb";
-import { PiInfoBold } from "react-icons/pi";
 import Button from "../common/Button";
+import { Post } from "@/app/types";
+import { PiInfoBold } from "react-icons/pi";
 
 interface PortfolioMainProps {
   portfolio: Post;
@@ -18,6 +17,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
     <div className={styles.main_content}>
       <div className={styles.main_head}>
         <h2 className={styles.main_title}>{props.portfolio.title}</h2>
+
         <Button className={styles.main_info_icon} onClick={undefined}>
           <PiInfoBold size={"24"} color="#487878" />
         </Button>
