@@ -19,7 +19,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
       <div className={styles.main_head}>
         <h2 className={styles.main_title}>{props.portfolio.title}</h2>
         <Button className={styles.main_info_icon} onClick={undefined}>
-          <PiInfoBold size={"24"} color="#7C8484" />
+          <PiInfoBold size={"24"} color="#487878" />
         </Button>
       </div>
 
@@ -29,21 +29,22 @@ const PortfolioMain = (props: PortfolioMainProps) => {
         ))}
       </div>
 
-      <div>
+      <ul className={styles.main_image_wrap}>
         {props.portfolio.images?.map((imageSrc, index) => (
-          <Image
-            key={index}
-            alt="thumbnail"
-            src={imageSrc}
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-            width={500}
-            height={300}
-          />
+          <li className={styles.main_image} key={index}>
+            <Image
+              alt="portfolio_img"
+              src={imageSrc}
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              width={500}
+              height={300}
+            />
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   );
 };

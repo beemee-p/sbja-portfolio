@@ -33,5 +33,19 @@
 }
 
 .main_content .main_video {
-  padding: 40px 0;
+}
+
+.main_content .main_image_wrap {
+  padding: 0;
+  margin: 0;
+}
+
+.main_content .main_image {
+  list-style-type: none;
+  padding: 0 0 20px;
+  margin: 0;
+}
+
+.main_content .main_image:last-child {
+  padding: 0;
 }
