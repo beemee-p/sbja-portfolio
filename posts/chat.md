@@ -15,15 +15,16 @@ features:
     "요청서와 견적서, 파일 다운로드(smallURL, signedURL) 를 통해 원활한 거래를 지원합니다.",
   ]
 skills: ["React", "Redux", "TypeScript", "Styled-component"]
-period: ["2020-12-19", "2020-12-20"]
-images: ["/images/portfolio-thumbnail01.webp"]
-videos: ["/videos/portfolio-chat.mov"]
+images: ["/images/chat/chat-m.png", "/images/chat/chat-estimate-m.png"]
+videos: ["/videos/chat/chat-pc.mov"]
 ---
 
 #### **✔️ 개요**
 
-- 판매자와 구매자 간 거래를 위한 채팅서비스 프로젝트입니다.
-- 채팅 리스트 / 서비스 메시지 컴포넌트 / 견적서 등을 담당하였습니다
+- 판매자와 구매자 간 거래를 위한 채팅 서비스입니다.
+- 채팅 리스트 / 서비스 메시지 컴포넌트 / 견적서 등을 담당하였습니다.
+- 요청서와 견적서, 파일 다운로드(smallURL, signedURL) 를 통해 원활한 1:1 거래를 지원합니다.
+- **결제건수 16% up**
 
 #### **✔️ 주요 기능**
 
