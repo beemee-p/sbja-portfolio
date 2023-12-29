@@ -5,6 +5,7 @@ import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
 import { getFormattedDate } from "@/library/getFormattedDate";
 import { getPostData } from "@/library/posts";
 import PortfolioMain from "@/components/portfolio/PortfolioMain";
+import { PortfolioProvider } from "@/components/portfolio/PortfolioContext";
 
 const PortfolioModal = async ({
   params,
@@ -15,12 +16,14 @@ const PortfolioModal = async ({
   const portfolio = await getPostData(portfolioID);
 
   return (
-    <Modal disableBodyScroll>
-      <div className={styles.modal_content_wrap}>
-        <PortfolioMain portfolio={portfolio} />
-        <PortfolioInfo contents={portfolio.contentHtml} />
-      </div>
-    </Modal>
+    <PortfolioProvider>
+      <Modal disableBodyScroll>
+        <div className={styles.modal_content_wrap}>
+          <PortfolioMain portfolio={portfolio} />
+          <PortfolioInfo contents={portfolio.contentHtml} />
+        </div>
+      </Modal>
+    </PortfolioProvider>
   );
 };
 

@@ -1,4 +1,5 @@
 .info_wrap {
+  position: relative;
   background: #fff;
   min-width: 25%;
   border-radius: 8px;
