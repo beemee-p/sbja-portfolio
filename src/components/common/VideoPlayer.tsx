@@ -1,5 +1,8 @@
 "use client";
 import React, { ReactElement, useState } from "react";
+import styles from "@/styles/css/common/VideoPlayer.module.css";
+import Button from "./Button";
+import { FaPlay, FaPause } from "react-icons/fa6";
 
 interface VideoPlayerProps {
   src?: string;
@@ -7,6 +10,7 @@ interface VideoPlayerProps {
 
 const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isHover, setIsHover] = useState<boolean>(false);
 
   function togglePlay() {
     const video = document.querySelector(
@@ -23,9 +27,13 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
   }
 
   return (
-    <div onClick={togglePlay}>
+    <div
+      className={styles.video_wrap}
+      onMouseEnter={() => setIsHover(true)}
+      onMouseLeave={() => setIsHover(false)}
+    >
       <video
-        className="portfolio-video"
+        className={`portfolio-video ${styles.video_content}`}
         autoPlay
         playsInline
         preload="metadata"
@@ -37,9 +45,20 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
         }}
       >
         <source src={props.src} type="video/mp4" />
-        Your browser does not support the video tag.
+        Your browser does not support the video tag
       </video>
-      <div>{isPlaying ? "play" : "stop"}</div>
+
+      {isHover && (
+        <div className={`${styles.video_bg_wrap}`}>
+          <Button className={styles.video_btn} onClick={togglePlay}>
+            {isPlaying ? (
+              <FaPause size={"30"} color="#ffffff" />
+            ) : (
+              <FaPlay size={"30"} color="#ffffff" />
+            )}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };
