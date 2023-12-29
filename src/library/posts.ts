@@ -49,7 +49,6 @@ export async function getPostData(id: string) {
     summary: matterRes.data.summary,
     features: matterRes.data.features,
     skills: matterRes.data.skills,
-    period: matterRes.data.period,
     images: matterRes.data.images,
     videos: matterRes.data.videos,
   };

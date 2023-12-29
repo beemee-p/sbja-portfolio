@@ -9,7 +9,6 @@ export type Post = {
   summary?: string[];
   features?: string[];
   skills?: string[];
-  period?: string[];
   images?: string[];
   videos?: string[];
 };
