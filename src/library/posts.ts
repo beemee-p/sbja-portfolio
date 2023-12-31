@@ -3,7 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import html from "remark-html";
 import { remark } from "remark";
-import { Post } from "@/app/types";
+import { Portfolio } from "@/app/types";
 
 const postDirectory = path.join(process.cwd(), "posts");
 
@@ -15,7 +15,7 @@ export function getSortedPostsData() {
     const contents = fs.readFileSync(fullPath, "utf8");
     const matterRes = matter(contents);
 
-    const post: Post = {
+    const post: Portfolio = {
       id,
       title: matterRes.data.title,
       date: matterRes.data.date,
@@ -38,7 +38,7 @@ export async function getPostData(id: string) {
   const processedContent = await remark().use(html).process(matterRes.content);
   const contentHtml = processedContent.toString();
 
-  const blogPostWithHTML: Post & { contentHtml: string } = {
+  const blogPostWithHTML: Portfolio & { contentHtml: string } = {
     id,
     title: matterRes.data.title,
     date: matterRes.data.date,

@@ -1,4 +1,6 @@
-export type Post = {
+export type PortfolioImage = Record<"title" | "img", string>;
+
+export type Portfolio = {
   date: string;
   thumbnail?: string;
   portfolio?: string;
@@ -9,6 +11,6 @@ export type Post = {
   summary?: string[];
   features?: string[];
   skills?: string[];
-  images?: string[];
+  images?: PortfolioImage[];
   videos?: string[];
 };

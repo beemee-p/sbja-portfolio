@@ -1,13 +1,13 @@
 "use client";
 import { ReactElement } from "react";
 import { getFormattedDate } from "@/library/getFormattedDate";
-import { Post } from "@/app/types";
+import { Portfolio } from "@/app/types";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/styles/css/ListCard.module.css";
 
 interface ListCardProps {
-  post: Post;
+  post: Portfolio;
 }
 
 const ListCard = (props: ListCardProps): ReactElement => {
