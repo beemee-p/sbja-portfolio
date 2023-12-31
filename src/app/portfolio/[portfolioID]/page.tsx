@@ -1,5 +1,5 @@
 import { getFormattedDate } from "@/library/getFormattedDate";
-import { getPostData, getSortedPostsData } from "@/library/posts";
+import { getPortfolio, getSortedPostsData } from "@/library/posts";
 import Link from "next/link";
 import NotFound from "@/app/portfolio/[portfolioID]/not-found";
 import styles from "@/styles/css/PortfolioDetail.module.css";
@@ -35,7 +35,7 @@ const PortfolioDetail = async ({
     return NotFound();
   }
 
-  const { title, date, thumbnail, contentHtml } = await getPostData(
+  const { title, date, thumbnail, contentHtml } = await getPortfolio(
     portfolioID
   );
 
