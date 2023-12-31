@@ -2,7 +2,6 @@ import React from "react";
 import styles from "@/styles/css/PortfolioModal.module.css";
 import Modal from "@/components/common/Modal";
 import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
-import { getFormattedDate } from "@/library/getFormattedDate";
 import { getPostData } from "@/library/posts";
 import PortfolioMain from "@/components/portfolio/PortfolioMain";
 import { PortfolioProvider } from "@/components/portfolio/PortfolioContext";

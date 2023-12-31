@@ -15,7 +15,14 @@ features:
     "요청서와 견적서, 파일 다운로드(smallURL, signedURL) 를 통해 원활한 거래를 지원합니다.",
   ]
 skills: ["React", "Redux", "TypeScript", "Styled-component"]
-images: ["/images/chat/chat-m.png", "/images/chat/chat-estimate-m.png"]
+images:
+  [
+    { title: "💡채팅 모바일💡", img: "/images/chat/chat-m.png" },
+    {
+      title: "💡채팅 모바일 견적서💡",
+      img: "/images/chat/chat-estimate-m.png",
+    },
+  ]
 videos: ["/videos/chat/chat-pc.mov"]
 ---
 
