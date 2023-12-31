@@ -1,8 +1,8 @@
 .main_content {
   background: #fff;
   margin-right: 20px;
-  overflow: auto;
   border-radius: 8px;
+  width: 100vw;
 }
 
 .main_content .main_head {
@@ -49,4 +49,12 @@
 
 .main_content .main_image:last-child {
   padding: 0;
+}
+
+.cursor {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0px;
+  top: 0px;
 }
