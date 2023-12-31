@@ -2,7 +2,7 @@ import React from "react";
 import styles from "@/styles/css/PortfolioModal.module.css";
 import Modal from "@/components/common/Modal";
 import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
-import { getPostData } from "@/library/posts";
+import { getPortfolio } from "@/library/posts";
 import PortfolioMain from "@/components/portfolio/PortfolioMain";
 import { PortfolioProvider } from "@/components/portfolio/PortfolioContext";
 
@@ -12,7 +12,7 @@ const PortfolioModal = async ({
   params: { portfolioID: string };
 }) => {
   const { portfolioID } = params;
-  const portfolio = await getPostData(portfolioID);
+  const portfolio = await getPortfolio(portfolioID);
 
   return (
     <PortfolioProvider>

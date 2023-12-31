@@ -29,7 +29,7 @@ export function getSortedPostsData() {
   return allPostsData.sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
-export async function getPostData(id: string) {
+export async function getPortfolio(id: string) {
   const fullPath = path.join(postDirectory, `${id}.md`);
   const contents = fs.readFileSync(fullPath, "utf8");
 

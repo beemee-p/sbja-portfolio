@@ -23,7 +23,6 @@ interface PortfolioMainProps {
 }
 
 const PortfolioMain = (props: PortfolioMainProps) => {
-  const [scrollTop, setScrollTop] = useState(0);
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
