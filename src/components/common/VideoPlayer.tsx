@@ -9,7 +9,7 @@ interface VideoPlayerProps {
 }
 
 const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const [isHover, setIsHover] = useState<boolean>(false);
 
   function togglePlay() {
@@ -19,11 +19,12 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
 
     if (video.paused || video.ended) {
       video.play();
+      setIsHover(false);
+      setIsPlaying(true);
     } else {
       video.pause();
+      setIsPlaying(false);
     }
-
-    setIsPlaying(!isPlaying);
   }
 
   return (
@@ -31,6 +32,7 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
       className={styles.video_wrap}
       onMouseEnter={() => setIsHover(true)}
       onMouseLeave={() => setIsHover(false)}
+      onClick={togglePlay}
     >
       <video
         className={`portfolio-video ${styles.video_content}`}
@@ -50,7 +52,7 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
 
       {isHover && (
         <div className={`${styles.video_bg_wrap}`}>
-          <Button className={styles.video_btn} onClick={togglePlay}>
+          <Button className={styles.video_btn}>
             {isPlaying ? (
               <FaPause size={"30"} color="#ffffff" />
             ) : (
