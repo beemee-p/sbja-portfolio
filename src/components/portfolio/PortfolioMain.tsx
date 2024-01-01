@@ -2,7 +2,6 @@
 import React, {
   MouseEventHandler,
   useCallback,
-  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -11,7 +10,8 @@ import VideoPlayer from "@/components/common/VideoPlayer";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 import Button from "../common/Button";
 import { Portfolio } from "@/app/types";
-import { PiInfoBold } from "react-icons/pi";
+import { GoInfo } from "react-icons/go";
+import { usePortfolioContext } from "./PortfolioContext";
 
 interface CursorPosition {
   x: number;
@@ -23,6 +23,7 @@ interface PortfolioMainProps {
 }
 
 const PortfolioMain = (props: PortfolioMainProps) => {
+  const context = usePortfolioContext();
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
@@ -31,9 +32,10 @@ const PortfolioMain = (props: PortfolioMainProps) => {
 
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {
+      const scrollTop = document.querySelector(".modal-outer")?.scrollTop || 0;
       setCursorPosition({
         x: e.clientX,
-        y: e.clientY + (document.querySelector(".modal-outer")?.scrollTop || 0),
+        y: e.clientY + scrollTop,
       });
     },
     []
@@ -66,8 +68,11 @@ const PortfolioMain = (props: PortfolioMainProps) => {
       <div className={styles.main_head}>
         <h2 className={styles.main_title}>{props.portfolio.title}</h2>
 
-        <Button className={styles.main_info_icon} onClick={undefined}>
-          <PiInfoBold size={"24"} color="#487878" />
+        <Button
+          className={styles.main_info_icon}
+          onClick={() => context.setShowInfo(!context.showInfo)}
+        >
+          <GoInfo size={"24"} color="#7c8484" />
         </Button>
       </div>
 
@@ -83,6 +88,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
             className={styles.main_image}
             key={index}
             onMouseEnter={() => setImgIndex(index)}
+            onMouseLeave={() => setImgIndex(-1)}
           >
             <Image
               alt="main_img"
