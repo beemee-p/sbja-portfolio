@@ -17,11 +17,8 @@ features:
 skills: ["React", "Redux", "TypeScript", "Styled-component"]
 images:
   [
-    { title: "💡채팅 모바일💡", img: "/images/chat/chat-m.png" },
-    {
-      title: "💡채팅 모바일 견적서💡",
-      img: "/images/chat/chat-estimate-m.png",
-    },
+    { title: "💡채팅 모바일", img: "/images/chat/chat-m.png" },
+    { title: "💡채팅 모바일 견적서", img: "/images/chat/chat-estimate-m.png" },
   ]
 videos: ["/videos/chat/chat-pc.mov"]
 ---
