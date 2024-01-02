@@ -97,8 +97,8 @@ const PortfolioMain = (props: PortfolioMainProps) => {
                 width: "100%",
                 height: "auto",
               }}
-              width={500}
-              height={300}
+              width={1000}
+              height={1000}
             />
           </li>
         ))}

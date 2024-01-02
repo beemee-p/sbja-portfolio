@@ -19,12 +19,10 @@ export default function ModalLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={notoSansKr.className}>
-      <body>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <div className={notoSansKr.className}>
+      <Header />
+      {children}
+      <Footer />
+    </div>
   );
 }
