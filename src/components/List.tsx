@@ -5,7 +5,7 @@ import ListCard from "@/components/ListCard";
 import Grid from "./common/Grid";
 
 const List = (): ReactElement => {
-  const posts = getSortedPostsData();
+  const portfolios = getSortedPostsData();
 
   return (
     <div className={`list-wrap ${styles.list_wrap}`}>
@@ -16,8 +16,8 @@ const List = (): ReactElement => {
         columnSpacing={40}
         direction={"row"}
       >
-        {posts.map((post) => (
-          <ListCard key={post.id} post={post} />
+        {portfolios.map((portfolio) => (
+          <ListCard key={portfolio.id} portfolio={portfolio} />
         ))}
       </Grid>
     </div>
