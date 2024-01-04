@@ -14,8 +14,8 @@ const PortfolioInfo = (props: PortfolioInfoProps): ReactElement => {
   // TODO: 등장 퇴장시 애니메이션 추가
 
   return context.showInfo ? (
-    <div className={styles.info_wrap}>
-      <section
+    <section className={styles.info_wrap}>
+      <article
         className={styles.info_content}
         dangerouslySetInnerHTML={{ __html: props.contents }}
       />
@@ -26,7 +26,7 @@ const PortfolioInfo = (props: PortfolioInfoProps): ReactElement => {
       >
         <IoCloseOutline size={"24"} color="#7C8484" />
       </Button>
-    </div>
+    </section>
   ) : (
     <></>
   );
