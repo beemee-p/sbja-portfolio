@@ -1,20 +1,26 @@
 "use client";
-import React, { ReactElement, useState } from "react";
+import React, { ReactElement, useEffect, useState } from "react";
 import styles from "@/styles/css/common/VideoPlayer.module.css";
 import Button from "./Button";
 import { FaPlay, FaPause } from "react-icons/fa6";
 
+const MOBILE_FILE_NAME = "-m.";
+
 interface VideoPlayerProps {
   src?: string;
+  index?: number;
 }
 
 const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
-  const [isPlaying, setIsPlaying] = useState<boolean>(true);
+  const isMobileVideo = props.src?.includes(MOBILE_FILE_NAME);
   const [isHover, setIsHover] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(
+    props.index === 0 ? true : false
+  );
 
   function togglePlay() {
     const video = document.querySelector(
-      ".portfolio-video"
+      `.portfolio-video-${props.index}`
     ) as HTMLVideoElement;
 
     if (video.paused || video.ended) {
@@ -35,14 +41,14 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
       onClick={togglePlay}
     >
       <video
-        className={`portfolio-video ${styles.video_content}`}
-        autoPlay
+        className={`portfolio-video-${props.index} ${styles.video_content}`}
+        autoPlay={isPlaying}
         playsInline
         preload="metadata"
         style={{
           display: "block",
           pointerEvents: "none",
-          width: "100%",
+          width: isMobileVideo ? "30%" : "100%",
           backgroundColor: "rgba(255, 255, 255, 0.03)",
         }}
       >

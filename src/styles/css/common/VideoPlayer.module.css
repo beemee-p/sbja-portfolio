@@ -1,5 +1,7 @@
 .video_wrap {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .video_bg_wrap {
