@@ -11,7 +11,7 @@ const notoSansKr = Noto_Sans_KR({
 
 export const metadata: Metadata = {
   title: "SBJA's Portfolio",
-  description: "Welcome to SBJA's Portfolio",
+  description: "Welcome to SBJA's iPortfolio",
 };
 
 export default function RootLayout({

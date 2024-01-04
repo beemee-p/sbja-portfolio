@@ -7,15 +7,13 @@ import React, {
 
 interface ButtonProps
   extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, "onClick"> {
-  className?: string;
-  children: ReactNode;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 }
 
-const Button = ({ className, children, onClick }: ButtonProps) => {
+const Button = (props: ButtonProps) => {
   return (
-    <button className={className} onClick={onClick}>
-      {children}
+    <button {...props} onClick={props.onClick}>
+      {props.children}
     </button>
   );
 };
