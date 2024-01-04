@@ -20,7 +20,7 @@ export function getSortedPostsData() {
       title: matterRes.data.title,
       date: matterRes.data.date,
       thumbnail: matterRes.data.thumbnail,
-      // 필요한 정보 추가
+      skills: matterRes.data.skills,
     };
 
     return post;
@@ -43,11 +43,8 @@ export async function getPortfolio(id: string) {
     title: matterRes.data.title,
     date: matterRes.data.date,
     thumbnail: matterRes.data.thumbnail,
-    portfolio: matterRes.data.portfolio,
     contentHtml,
     // 새로운 정보
-    summary: matterRes.data.summary,
-    features: matterRes.data.features,
     skills: matterRes.data.skills,
     images: matterRes.data.images,
     videos: matterRes.data.videos,
