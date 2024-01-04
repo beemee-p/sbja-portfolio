@@ -12,6 +12,7 @@ import Button from "../common/Button";
 import { Portfolio } from "@/app/types";
 import { GoInfo } from "react-icons/go";
 import { usePortfolioContext } from "./PortfolioContext";
+import Badge from "../common/Badge";
 
 interface CursorPosition {
   x: number;
@@ -60,13 +61,23 @@ const PortfolioMain = (props: PortfolioMainProps) => {
   }, [imgIndex, cursorPosition, props.portfolio.images]);
 
   return (
-    <div
+    <section
       id="portfolio-main"
       className={styles.main_content}
       onMouseMove={handleMouseMove}
     >
-      <div className={styles.main_head}>
-        <h2 className={styles.main_title}>{props.portfolio.title}</h2>
+      <article className={styles.main_head_wrap}>
+        <div className={styles.main_head}>
+          <h2 className={styles.main_title}>{props.portfolio.title}</h2>
+
+          <div className={styles.main_badge_wrap}>
+            {props.portfolio.skills?.map((skill, index) => (
+              <Badge key={index} className={`${skill} badge`}>
+                {skill}
+              </Badge>
+            ))}
+          </div>
+        </div>
 
         <Button
           className={styles.main_info_icon}
@@ -74,13 +85,13 @@ const PortfolioMain = (props: PortfolioMainProps) => {
         >
           <GoInfo size={"24"} color="#7c8484" />
         </Button>
-      </div>
+      </article>
 
-      <div className={styles.main_video}>
+      <article className={styles.main_video}>
         {props.portfolio.videos?.map((videoSrc, index) => (
           <VideoPlayer key={index} src={videoSrc} />
         ))}
-      </div>
+      </article>
 
       <ul className={styles.main_image_wrap}>
         {props.portfolio.images?.map((image, index) => (
@@ -97,6 +108,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
                 width: "100%",
                 height: "auto",
               }}
+              quality={100}
               width={1000}
               height={1000}
             />
@@ -105,7 +117,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
       </ul>
 
       {mouseCursor}
-    </div>
+    </section>
   );
 };
 
