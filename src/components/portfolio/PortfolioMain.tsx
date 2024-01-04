@@ -89,7 +89,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
 
       <article className={styles.main_video}>
         {props.portfolio.videos?.map((videoSrc, index) => (
-          <VideoPlayer key={index} src={videoSrc} />
+          <VideoPlayer key={index} src={videoSrc} index={index} />
         ))}
       </article>
 
