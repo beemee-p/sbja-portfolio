@@ -6,6 +6,7 @@
   min-width: 25%;
   border-radius: 8px;
   padding: 24px;
+  overflow: auto;
 }
 
 .info_close_btn {

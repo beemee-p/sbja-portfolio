@@ -14,7 +14,7 @@ const PortfolioInfo = (props: PortfolioInfoProps): ReactElement => {
   // TODO: 등장 퇴장시 애니메이션 추가
 
   return context.showInfo ? (
-    <section className={styles.info_wrap}>
+    <section className={`${styles.info_wrap} scroll_default`}>
       <article
         className={styles.info_content}
         dangerouslySetInnerHTML={{ __html: props.contents }}

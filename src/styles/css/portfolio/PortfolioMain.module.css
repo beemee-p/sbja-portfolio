@@ -3,6 +3,7 @@
   margin-right: 20px;
   border-radius: 8px;
   width: 100vw;
+  min-width: calc(65% - 20px);
 }
 
 .main_content .main_head_wrap {
@@ -26,14 +27,17 @@
   line-height: 36px;
   letter-spacing: -0.5px;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .main_head .main_badge_wrap {
   margin-left: 8px;
   padding-bottom: 4px;
+  white-space: nowrap;
 }
 
 .main_head .main_badge_wrap label {
+  display: inline-block;
   margin-right: 4px;
 }
 
@@ -85,4 +89,19 @@
   line-height: 15px;
   text-align: center;
   letter-spacing: -0.25px;
+}
+
+@media (max-width: 1024px) {
+  .main_head_wrap .main_head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .main_head .main_title {
+    margin-bottom: 8px;
+  }
+
+  .main_head .main_badge_wrap {
+    margin-left: 0;
+  }
 }

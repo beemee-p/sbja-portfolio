@@ -18,6 +18,22 @@ body::-webkit-scrollbar-button {
   width: 0;
 }
 
+.scroll_default::-webkit-scrollbar-corner {
+  background-color: inherit;
+}
+.scroll_default::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+.scroll_default::-webkit-scrollbar-thumb {
+  background-color: #bfc6d2;
+  border-radius: 4px;
+}
+.scroll_default::-webkit-scrollbar-button {
+  height: 0;
+  width: 0;
+}
+
 .React {
   color: #2656f6;
   background: #e1edff;

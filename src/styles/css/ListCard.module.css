@@ -67,6 +67,7 @@
 }
 
 .list_card_info .list_card_badge label {
+  display: inline-block;
   margin-right: 4px;
 }
 
