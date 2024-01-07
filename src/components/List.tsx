@@ -11,7 +11,7 @@ const List = (): ReactElement => {
     <div className={`list-wrap ${styles.list_wrap}`}>
       <h1 className={styles.h1}>MUST READ</h1>
       <Grid
-        itemPerLine={3}
+        itemPerLine={4}
         rowSpacing={20}
         columnSpacing={40}
         direction={"row"}

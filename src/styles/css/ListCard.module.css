@@ -50,8 +50,7 @@
 }
 
 .list_card_img:hover {
-  transform: scale(1.1);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 20px 0px;
+  transform: scale(1.05);
 }
 
 .list_card_img_wrap:hover .deem {
