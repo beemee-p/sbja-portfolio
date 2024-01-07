@@ -5,7 +5,7 @@ thumbnail: "/images/main/main-pc.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images:
   [
-    { title: "💡메인홈 pc", img: "/images/main/main-pc.png" },
+    { title: "💡메인홈 PC", img: "/images/main/main-pc.png" },
     { title: "💡메인홈 모바일", img: "/images/main/main-m.png" },
   ]
 ---
