@@ -24,7 +24,7 @@ const ListCard = (props: ListCardProps): ReactElement => {
           <div className={styles.list_card_img_wrap}>
             <div className={styles.list_card_img}>
               <Image
-                // className={styles.list_card_img}
+                className={styles.list_card_img}
                 alt="thumbnail"
                 src={props.portfolio.thumbnail}
                 style={{ width: "100%", height: "100%" }}
