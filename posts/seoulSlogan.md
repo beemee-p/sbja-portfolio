@@ -1,7 +1,7 @@
 ---
 title: "Seoul Slogan Contest"
 date: "2020-12-23"
-thumbnail: "/images/seoulSlogan/seoul-slogan-pc.png"
+thumbnail: "/images/seoulSlogan/seoul-slogan-thumbnail.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 videos:
   [

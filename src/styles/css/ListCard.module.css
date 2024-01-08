@@ -49,12 +49,12 @@
   background-color: transparent;
 }
 
-.list_card_img:hover {
-  transform: scale(1.05);
-}
-
 .list_card_img_wrap:hover .deem {
   background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.list_card_img:hover {
+  transform: scale(1.05);
 }
 
 .list_card_info .list_card_title {
