@@ -1,7 +1,7 @@
 ---
 title: "Banner Ad Service"
 date: "2021-01-01"
-thumbnail: "/images/banner/banner-mypage-pc.png"
+thumbnail: "/images/banner/banner-mypage-m.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images:
   [

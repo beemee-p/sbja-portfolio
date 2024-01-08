@@ -1,7 +1,7 @@
 ---
 title: "Designer Online Marketplace"
 date: "2020-12-20"
-thumbnail: "/images/market/market-mypage-pc.png"
+thumbnail: "/images/market/market-thumbnail.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images:
   [

@@ -1,7 +1,7 @@
 ---
 title: "Pricing Page (가격 안내)"
 date: "2020-12-24"
-thumbnail: "/images/pricing/pricing-pc.png"
+thumbnail: "/images/pricing/pricing-thumbnail.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images: [{ title: "💡가격안내 모바일", img: "/images/pricing/pricing-m.png" }]
 videos: ["/videos/pricing/pricing.mp4"]

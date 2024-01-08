@@ -1,7 +1,7 @@
 ---
 title: "Coupon System"
 date: "2021-01-02"
-thumbnail: "/images/coupon/coupon-pc.png"
+thumbnail: "/images/coupon/coupon-download.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images:
   [

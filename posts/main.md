@@ -1,7 +1,7 @@
 ---
 title: "Main Page A/B Test"
 date: "2020-12-21"
-thumbnail: "/images/main/main-pc.png"
+thumbnail: "/images/main/main-thumbnail.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images:
   [

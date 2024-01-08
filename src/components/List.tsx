@@ -9,7 +9,7 @@ const List = (): ReactElement => {
 
   return (
     <div className={`list-wrap ${styles.list_wrap}`}>
-      <h1 className={styles.h1}>MUST READ</h1>
+      <h1 className={styles.h1}>PORTFOLIOS</h1>
       <Grid
         itemPerLine={4}
         rowSpacing={20}
