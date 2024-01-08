@@ -1,19 +1,28 @@
 ---
 title: "Notification Center"
 date: "2021-01-02"
-thumbnail: "/images/noti/noti-setting-ld.png"
+thumbnail: "/images/noti/noti-center-nf.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
 images:
   [
+    { title: "💡노트폴리오 알림함 PC", img: "/images/noti/noti-center-nf.png" },
     {
-      title: "💡라우드소싱 알림센터 설정",
-      img: "/images/noti/noti-setting-ld.png",
+      title: "💡노트폴리오 알림함 모바일",
+      img: "/images/noti/noti-center-nf-m.png",
     },
     {
       title: "💡노트폴리오 알림센터 설정",
       img: "/images/noti/noti-setting-nf.png",
     },
-    { title: "💡라우드소싱 알림함", img: "/images/noti/noti-center-ld.png" },
+    { title: "💡라우드소싱 알림함 PC", img: "/images/noti/noti-center-ld.png" },
+    {
+      title: "💡라우드소싱 알림함 모바일",
+      img: "/images/noti/noti-center-ld-m.png",
+    },
+    {
+      title: "💡라우드소싱 알림센터 설정",
+      img: "/images/noti/noti-setting-ld.png",
+    },
   ]
 ---
 
