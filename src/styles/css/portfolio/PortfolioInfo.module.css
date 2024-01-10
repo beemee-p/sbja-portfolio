@@ -9,6 +9,11 @@
   overflow: auto;
 }
 
+.page {
+  top: 139px;
+  border: 1px solid #e4e4e4;
+}
+
 .info_close_btn {
   position: absolute;
   top: 24px;

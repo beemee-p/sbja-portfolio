@@ -67,7 +67,7 @@ const Menu = (props: MenuProps): ReactElement => {
     window.scrollTo({ top: offset, behavior: "smooth" });
   }
   return (
-    <div
+    <nav
       className={`${styles.menu} ${props.isMenu ? styles.on : styles.off}`}
       onClick={(e) => handleClose(e)}
     >
@@ -78,7 +78,7 @@ const Menu = (props: MenuProps): ReactElement => {
           </Link>
         ))}
       </div>
-    </div>
+    </nav>
   );
 };
 
