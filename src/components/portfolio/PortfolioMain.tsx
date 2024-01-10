@@ -21,9 +21,10 @@ interface CursorPosition {
 
 interface PortfolioMainProps {
   portfolio: Portfolio;
+  isPage?: boolean;
 }
 
-const PortfolioMain = (props: PortfolioMainProps) => {
+const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const context = usePortfolioContext();
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
@@ -63,7 +64,7 @@ const PortfolioMain = (props: PortfolioMainProps) => {
   return (
     <section
       id="portfolio-main"
-      className={styles.main_content}
+      className={`${styles.main_content} ${isPage ? styles.page : ""}`}
       onMouseMove={handleMouseMove}
     >
       <article className={styles.main_head_wrap}>

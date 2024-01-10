@@ -7,14 +7,22 @@ import { usePortfolioContext } from "./PortfolioContext";
 
 interface PortfolioInfoProps {
   contents: string;
+  isPage?: boolean;
 }
 
-const PortfolioInfo = (props: PortfolioInfoProps): ReactElement => {
+const PortfolioInfo = ({
+  isPage = false,
+  ...props
+}: PortfolioInfoProps): ReactElement => {
   const context = usePortfolioContext();
   // TODO: 등장 퇴장시 애니메이션 추가
 
   return context.showInfo ? (
-    <section className={`${styles.info_wrap} scroll_default`}>
+    <section
+      className={`${styles.info_wrap} scroll_default ${
+        isPage ? styles.page : ""
+      }`}
+    >
       <article
         className={styles.info_content}
         dangerouslySetInnerHTML={{ __html: props.contents }}
