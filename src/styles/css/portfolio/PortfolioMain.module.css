@@ -6,6 +6,10 @@
   min-width: calc(65% - 20px);
 }
 
+.page {
+  border: 1px solid #e4e4e4;
+}
+
 .main_content .main_head_wrap {
   display: flex;
   flex-direction: row;

@@ -1,9 +1,11 @@
-import { getFormattedDate } from "@/library/getFormattedDate";
 import { getPortfolio, getSortedPostsData } from "@/library/posts";
-import Link from "next/link";
+import { PortfolioProvider } from "@/components/portfolio/PortfolioContext";
+import PortfolioMain from "@/components/portfolio/PortfolioMain";
+import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
 import NotFound from "@/app/portfolio/[portfolioID]/not-found";
 import styles from "@/styles/css/PortfolioDetail.module.css";
 
+// param 을 빌드시 먼저 생성
 export function generateStaticParams() {
   const posts = getSortedPostsData();
   return posts.map((portfolio) => ({ portfolioID: portfolio.id }));
@@ -16,7 +18,7 @@ const generateMetaData = ({ params }: { params: { portfolioID: string } }) => {
 
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: "Portfolio Not Found",
     };
   }
 
@@ -35,24 +37,15 @@ const PortfolioDetail = async ({
     return NotFound();
   }
 
-  const { title, date, thumbnail, contentHtml } = await getPortfolio(
-    portfolioID
-  );
-
-  const pubDate = getFormattedDate(date);
+  const portfolio = await getPortfolio(portfolioID);
 
   return (
-    <div className={styles.detail_wrap}>
-      <h1>{title}</h1>
-      <p>{pubDate}</p>
-
-      <article>
-        <section dangerouslySetInnerHTML={{ __html: contentHtml }} />
-        <p>
-          <Link href={"/"}>Back to home</Link>
-        </p>
-      </article>
-    </div>
+    <PortfolioProvider>
+      <div className={styles.content_wrap}>
+        <PortfolioMain portfolio={portfolio} isPage />
+        <PortfolioInfo contents={portfolio.contentHtml} isPage />
+      </div>
+    </PortfolioProvider>
   );
 };
 
