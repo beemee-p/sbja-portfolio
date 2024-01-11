@@ -15,7 +15,7 @@ const List = (props: ListProps): ReactElement => {
   return (
     <Grid
       itemPerLine={isMobile ? 1 : isTablet ? 3 : 4}
-      rowSpacing={20}
+      rowSpacing={24}
       columnSpacing={40}
       direction={"row"}
     >
