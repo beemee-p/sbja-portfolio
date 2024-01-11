@@ -1,14 +1,28 @@
 "use client";
-import { ReactElement } from "react";
+import { ReactElement, useCallback, useEffect, useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import styles from "@/styles/css/Banner.module.css";
+import { useDeviceContext } from "./DeviceContext";
+import { HEADER_HEIGHT } from "@/utils/Constants";
 
 const Banner = (): ReactElement => {
+  const { isMobile, isTablet } = useDeviceContext();
+  const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT.PC);
+
+  useEffect(() => {
+    if (isMobile) {
+      setHeaderHeight(HEADER_HEIGHT.MOBILE);
+    } else if (isTablet) {
+      setHeaderHeight(HEADER_HEIGHT.TABLET);
+    } else {
+      setHeaderHeight(HEADER_HEIGHT.PC);
+    }
+  }, [isMobile, isTablet]);
+
   function handleMoveScroll() {
     const list = document.querySelector(".list-wrap") as HTMLDivElement | null;
-    list?.scrollIntoView({ behavior: "smooth" });
-
-    const offset: number | undefined = (list?.offsetTop as number) - 93;
+    const offset: number | undefined =
+      (list?.offsetTop as number) - headerHeight;
     window.scrollTo({ top: offset, behavior: "smooth" });
   }
 

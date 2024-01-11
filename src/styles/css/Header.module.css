@@ -83,6 +83,10 @@
   .menu_icon {
     margin-left: 0;
   }
+
+  .menu_btn.on {
+    right: 16px;
+  }
 }
 
 @media (max-width: 600px) {
