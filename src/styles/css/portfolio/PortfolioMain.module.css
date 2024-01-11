@@ -4,6 +4,8 @@
   border-radius: 8px;
   width: 100vw;
   min-width: calc(65% - 20px);
+  height: auto;
+  min-height: 90vh;
 }
 
 .page {
