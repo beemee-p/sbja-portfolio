@@ -18,7 +18,7 @@
 .modal_inner {
   width: 90%;
   height: min-content;
-  min-height: 101vh;
+  min-height: 100%;
   border-radius: 8px;
   margin: 48px auto;
   z-index: 200;
