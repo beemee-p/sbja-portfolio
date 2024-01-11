@@ -41,8 +41,9 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
       onClick={togglePlay}
     >
       <video
-        className={`portfolio-video-${props.index} ${styles.video_content}`}
+        className={`portfolio-video-${props.index}`}
         autoPlay={isPlaying}
+        muted
         playsInline
         preload="metadata"
         style={{
