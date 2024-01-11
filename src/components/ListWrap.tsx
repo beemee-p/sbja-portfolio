@@ -1,9 +1,6 @@
 import { ReactElement } from "react";
 import { getSortedPostsData } from "@/library/posts";
-import styles from "@/styles/css/List.module.css";
-import ListCard from "@/components/ListCard";
-import Grid from "./common/Grid";
-import { useDeviceContext } from "./DeviceContext";
+import styles from "@/styles/css/ListWrap.module.css";
 import List from "./List";
 
 const ListWrap = (): ReactElement => {
