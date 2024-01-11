@@ -27,7 +27,7 @@
 
 - Detail - Modal
 모달 형식으로 구성(interrupt route)
-
+2패널 구성으로 열고 닫을 수 있도록 레이아웃 설계
 ![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/d9cf42f5-9730-49b9-857c-185e68d8753e)
 ![image](https://github.com/beemee-p/sbja-portfolio/assets/72956452/2cd0b862-c848-4791-8ed9-49dbf1f0400c)
 
