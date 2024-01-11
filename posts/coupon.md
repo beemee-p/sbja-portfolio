@@ -11,7 +11,7 @@ images: [
     },
     { title: "💡쿠폰함 모바일", img: "/images/coupon/coupon-m.png" },
   ]
-videos: ["videos/coupon/coupon-download.mp4"]
+videos: ["/videos/coupon/coupon-download.mp4"]
 ---
 
 #### **✔️ 개요**
