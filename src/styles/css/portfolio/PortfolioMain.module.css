@@ -98,6 +98,15 @@
 }
 
 @media (max-width: 1024px) {
+  .main_content {
+    border-radius: 0;
+    margin-right: 24px;
+  }
+
+  .main_content .main_head_wrap {
+    padding: 24px 0 60px;
+  }
+
   .main_head_wrap .main_head {
     flex-direction: column;
     align-items: flex-start;
@@ -105,6 +114,8 @@
 
   .main_head .main_title {
     margin-bottom: 8px;
+    font-weight: 500;
+    line-height: 26px;
   }
 
   .main_head .main_badge_wrap {
