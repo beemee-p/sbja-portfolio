@@ -2,22 +2,6 @@ body {
   margin: 0;
 }
 
-body::-webkit-scrollbar-corner {
-  background-color: inherit;
-}
-body::-webkit-scrollbar {
-  width: 5px;
-  height: 5px;
-}
-body::-webkit-scrollbar-thumb {
-  background-color: #bfc6d2;
-  border-radius: 4px;
-}
-body::-webkit-scrollbar-button {
-  height: 0;
-  width: 0;
-}
-
 .scroll_default::-webkit-scrollbar-corner {
   background-color: inherit;
 }

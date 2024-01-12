@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={notoSansKr.className}>
-      <body>
+      <body className="scroll_default">
         <Header />
         {children}
         <Footer />
