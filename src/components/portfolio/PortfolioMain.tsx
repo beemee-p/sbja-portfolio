@@ -2,6 +2,7 @@
 import React, {
   MouseEventHandler,
   useCallback,
+  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -13,6 +14,7 @@ import { Portfolio } from "@/app/types";
 import { GoInfo } from "react-icons/go";
 import { usePortfolioContext } from "./PortfolioContext";
 import Badge from "../common/Badge";
+import { useDeviceContext } from "../DeviceContext";
 
 interface CursorPosition {
   x: number;
@@ -26,11 +28,18 @@ interface PortfolioMainProps {
 
 const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const context = usePortfolioContext();
+  const { isTablet } = useDeviceContext();
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
     y: 0,
   });
+
+  useEffect(() => {
+    if (isTablet) {
+      context.setShowInfo(false);
+    }
+  }, [isTablet, context]);
 
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {

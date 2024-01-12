@@ -4,6 +4,7 @@ import PortfolioMain from "@/components/portfolio/PortfolioMain";
 import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
 import NotFound from "@/app/portfolio/[portfolioID]/not-found";
 import styles from "@/styles/css/PortfolioDetail.module.css";
+import { DeviceProvider } from "@/components/DeviceContext";
 
 // param 을 빌드시 먼저 생성
 export function generateStaticParams() {
@@ -40,12 +41,14 @@ const PortfolioDetail = async ({
   const portfolio = await getPortfolio(portfolioID);
 
   return (
-    <PortfolioProvider>
-      <div className={styles.content_wrap}>
-        <PortfolioMain portfolio={portfolio} isPage />
-        <PortfolioInfo contents={portfolio.contentHtml} isPage />
-      </div>
-    </PortfolioProvider>
+    <DeviceProvider>
+      <PortfolioProvider>
+        <div className={styles.content_wrap}>
+          <PortfolioMain portfolio={portfolio} isPage />
+          <PortfolioInfo contents={portfolio.contentHtml} isPage />
+        </div>
+      </PortfolioProvider>
+    </DeviceProvider>
   );
 };
 

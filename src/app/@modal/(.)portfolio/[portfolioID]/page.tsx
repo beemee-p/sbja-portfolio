@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "@/styles/css/PortfolioModal.module.css";
-import Modal from "@/components/common/Modal";
-import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
 import { getPortfolio } from "@/library/posts";
-import PortfolioMain from "@/components/portfolio/PortfolioMain";
+import { DeviceProvider } from "@/components/DeviceContext";
 import { PortfolioProvider } from "@/components/portfolio/PortfolioContext";
+import Modal from "@/components/common/Modal";
+import Header from "@/components/Header";
+import PortfolioInfo from "@/components/portfolio/PortfolioInfo";
+import PortfolioMain from "@/components/portfolio/PortfolioMain";
 
 const PortfolioModal = async ({
   params,
@@ -15,14 +17,19 @@ const PortfolioModal = async ({
   const portfolio = await getPortfolio(portfolioID);
 
   return (
-    <PortfolioProvider>
-      <Modal disableBodyScroll>
-        <div className={styles.modal_content_wrap}>
-          <PortfolioMain portfolio={portfolio} />
-          <PortfolioInfo contents={portfolio.contentHtml} />
-        </div>
-      </Modal>
-    </PortfolioProvider>
+    <DeviceProvider>
+      <PortfolioProvider>
+        <Modal disableBodyScroll>
+          <div className={styles.modal_header}>
+            <Header />
+          </div>
+          <div className={styles.modal_content_wrap}>
+            <PortfolioMain portfolio={portfolio} />
+            <PortfolioInfo contents={portfolio.contentHtml} />
+          </div>
+        </Modal>
+      </PortfolioProvider>
+    </DeviceProvider>
   );
 };
 
