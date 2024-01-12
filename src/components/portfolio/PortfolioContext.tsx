@@ -4,8 +4,10 @@ import React, {
   SetStateAction,
   createContext,
   useContext,
+  useEffect,
   useState,
 } from "react";
+import { useDeviceContext } from "../DeviceContext";
 
 interface PortfolioContextType {
   showInfo: boolean;
@@ -22,7 +24,15 @@ export const PortfolioProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
+  const { isTablet } = useDeviceContext();
   const [showInfo, setShowInfo] = useState(true);
+
+  useEffect(() => {
+    if (!isTablet) {
+      return;
+    }
+    setShowInfo(false);
+  }, [isTablet]);
 
   return (
     <PortfolioContext.Provider value={{ showInfo, setShowInfo }}>

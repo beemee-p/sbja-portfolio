@@ -15,13 +15,12 @@ const PortfolioInfo = ({
   ...props
 }: PortfolioInfoProps): ReactElement => {
   const context = usePortfolioContext();
-  // TODO: 등장 퇴장시 애니메이션 추가
 
-  return context.showInfo ? (
+  return (
     <section
-      className={`${styles.info_wrap} scroll_default ${
+      className={`scroll_default ${styles.info_wrap} ${
         isPage ? styles.page : ""
-      }`}
+      }${context.showInfo ? styles.open : styles.close}`}
     >
       <article
         className={styles.info_content}
@@ -35,8 +34,6 @@ const PortfolioInfo = ({
         <IoCloseOutline size={"24"} color="#7C8484" />
       </Button>
     </section>
-  ) : (
-    <></>
   );
 };
 

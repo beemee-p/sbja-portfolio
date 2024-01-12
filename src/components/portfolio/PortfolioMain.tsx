@@ -28,18 +28,11 @@ interface PortfolioMainProps {
 
 const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const context = usePortfolioContext();
-  const { isTablet } = useDeviceContext();
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
     y: 0,
   });
-
-  useEffect(() => {
-    if (isTablet) {
-      context.setShowInfo(false);
-    }
-  }, [isTablet, context]);
 
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {
