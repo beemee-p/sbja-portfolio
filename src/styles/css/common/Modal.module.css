@@ -58,10 +58,18 @@
 
 @media (max-width: 1024px) {
   .modal_outer {
+    /* HEADER_HEIGHT.TABLET */
     top: 68px;
   }
   .modal_inner {
     width: 100%;
     margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal_outer {
+    /* HEADER_HEIGHT.MOBILE */
+    top: 52px;
   }
 }

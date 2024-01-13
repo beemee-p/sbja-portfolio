@@ -11,3 +11,9 @@
     overflow: hidden;
   }
 }
+
+@media (max-width: 600px) {
+  .modal_content_wrap {
+    padding: 0 0 80px 16px;
+  }
+}

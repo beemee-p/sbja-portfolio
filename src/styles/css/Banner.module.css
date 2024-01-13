@@ -56,6 +56,7 @@
 }
 
 @media (max-width: 1024px) {
+  /* HEADER_HEIGHT.TABLET */
   .banner {
     height: calc(100vh - 68px);
   }
@@ -67,6 +68,11 @@
 }
 
 @media (max-width: 600px) {
+  .banner {
+    /* HEADER_HEIGHT.MOBILE */
+    height: calc(100vh - 52px);
+  }
+
   .title {
     font-size: 52px;
     line-height: 46px;
