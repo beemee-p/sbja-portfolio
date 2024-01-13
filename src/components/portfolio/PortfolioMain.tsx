@@ -66,7 +66,9 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   return (
     <section
       id="portfolio-main"
-      className={`${styles.main_content} ${isPage ? styles.page : ""}`}
+      className={`${styles.main_content} ${isPage ? styles.page : ""} ${
+        context.showInfo ? styles.open_info : styles.close_info
+      }`}
       onMouseMove={handleMouseMove}
     >
       <article className={styles.main_head_wrap}>

@@ -6,6 +6,11 @@
   height: auto;
   min-width: calc(65% - 20px);
   min-height: 90vh;
+  transition: min-width 0.5s ease;
+}
+
+.close_info {
+  min-width: 100%;
 }
 
 .page {
@@ -101,6 +106,10 @@
   .main_content {
     border-radius: 0;
     margin-right: 24px;
+  }
+
+  .close_info {
+    min-width: inherit;
   }
 
   .main_content .main_head_wrap {
