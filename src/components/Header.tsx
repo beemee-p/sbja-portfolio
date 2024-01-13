@@ -1,5 +1,5 @@
 "use client";
-import { ReactElement, useCallback, useState } from "react";
+import { ReactElement, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { useParams, useRouter } from "next/navigation";

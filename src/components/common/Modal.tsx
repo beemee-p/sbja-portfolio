@@ -1,16 +1,9 @@
 "use client";
-import React, {
-  HTMLAttributes,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useRef,
-} from "react";
-import styles from "@/styles/css/common/Modal.module.css";
-import { handleDisableBodyScroll } from "@/utils/scroll";
-import { useRouter } from "next/navigation";
+import React, { useCallback, useEffect, useRef } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import Button from "./Button";
+import { useRouter } from "next/navigation";
+import Button from "@/components/common/Button";
+import styles from "@/styles/css/common/Modal.module.css";
 
 const DISABLED_SCROLL_CLASSNAME = "disabled_scroll";
 

@@ -6,15 +6,14 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import Image from "next/image";
-import VideoPlayer from "@/components/common/VideoPlayer";
-import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
-import Button from "../common/Button";
-import { Portfolio } from "@/app/types";
 import { GoInfo } from "react-icons/go";
-import { usePortfolioContext } from "./PortfolioContext";
-import Badge from "../common/Badge";
-import { useDeviceContext } from "../DeviceContext";
+import { Portfolio } from "@/app/types";
+import Image from "next/image";
+import Badge from "@/components/common/Badge";
+import Button from "@/components/common/Button";
+import VideoPlayer from "@/components/common/VideoPlayer";
+import { usePortfolioContext } from "@/components/portfolio/PortfolioContext";
+import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 
 interface CursorPosition {
   x: number;
