@@ -20,7 +20,7 @@ export default function ModalLayout({
 }) {
   return (
     <div className={notoSansKr.className}>
-      <Header />
+      <Header isModal />
       {children}
       <Footer />
     </div>
