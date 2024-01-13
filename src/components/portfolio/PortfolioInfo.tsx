@@ -18,9 +18,9 @@ const PortfolioInfo = ({
 
   return (
     <section
-      className={`scroll_default ${styles.info_wrap} ${
-        isPage ? styles.page : ""
-      }${context.showInfo ? styles.open : styles.close}`}
+      className={`${styles.info_wrap} ${isPage ? styles.page : ""} ${
+        context.showInfo ? styles.open : styles.close
+      } scroll_default `}
     >
       <article
         className={styles.info_content}

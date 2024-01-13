@@ -114,7 +114,7 @@ const Modal = ({
 
   return (
     <div
-      className={`modal-outer ${styles.modal_outer}`}
+      className={`modal-outer scroll_default ${styles.modal_outer}`}
       onMouseUp={handleClickClose}
     >
       <div className={styles.modal_wrap}>
