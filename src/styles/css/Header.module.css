@@ -74,7 +74,7 @@
 
 @media (max-width: 1024px) {
   .header {
-    padding: 10px 24px;
+    padding: 10.5px 24px;
     width: calc(100% - 48px);
   }
 

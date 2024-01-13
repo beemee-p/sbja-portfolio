@@ -29,7 +29,7 @@ interface PortfolioMainProps {
 
 const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const context = usePortfolioContext();
-  const { isTablet, isMobile } = useDeviceContext();
+  const { isMobile, isTablet } = useDeviceContext();
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
@@ -99,7 +99,7 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
           className={styles.main_info_icon}
           onClick={() => context.setShowInfo(!context.showInfo)}
         >
-          <GoInfo size={"24"} color="#7c8484" />
+          <GoInfo size={isMobile ? "18" : "24"} color="#7c8484" />
         </Button>
       </article>
 

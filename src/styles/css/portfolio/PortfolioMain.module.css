@@ -137,4 +137,21 @@
   .main_content {
     margin-right: 16px;
   }
+  .main_head_wrap {
+    position: relative;
+  }
+
+  .main_head_wrap .main_info_icon {
+    position: absolute;
+    top: 26px;
+    right: 0;
+  }
+
+  .main_head .main_title {
+    font-size: 20px;
+  }
+
+  .main_head .main_badge_wrap {
+    white-space: pre-line;
+  }
 }
