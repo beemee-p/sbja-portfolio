@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { DeviceProvider } from "@/components/DeviceContext";
+import { PortfolioProvider } from "@/components/portfolio/PortfolioContext";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -19,10 +21,14 @@ export default function ModalLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className={notoSansKr.className}>
-      <Header isModal />
-      {children}
-      <Footer />
-    </div>
+    <DeviceProvider>
+      <PortfolioProvider>
+        <div className={notoSansKr.className}>
+          <Header isModal={true} />
+          {children}
+          <Footer />
+        </div>
+      </PortfolioProvider>
+    </DeviceProvider>
   );
 }
