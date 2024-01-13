@@ -2,18 +2,24 @@ import { ReactElement, useEffect, useState } from "react";
 import { TbExternalLink } from "react-icons/tb";
 import Link from "next/link";
 import styles from "@/styles/css/Menu.module.css";
+import { useRouter } from "next/navigation";
 
 interface MenuProps {
   isMenu: boolean;
+  isModal?: boolean;
   close: () => void;
 }
 
 const Menu = (props: MenuProps): ReactElement => {
+  const router = useRouter();
   const menuList = [
     {
       title: "PORTFOLIO",
       linkProps: {
-        onClick: handleMoveScroll,
+        onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+          props.isModal && handleMoveBack(e);
+          handleMoveScroll(e);
+        },
         href: "/",
       },
     },
@@ -56,6 +62,11 @@ const Menu = (props: MenuProps): ReactElement => {
     props.close();
   }
 
+  function handleMoveBack(e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) {
+    e.preventDefault();
+    router.back();
+  }
+
   function handleMoveScroll(
     e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
   ) {
@@ -66,6 +77,7 @@ const Menu = (props: MenuProps): ReactElement => {
     const offset: number | undefined = (list?.offsetTop as number) - 93;
     window.scrollTo({ top: offset, behavior: "smooth" });
   }
+
   return (
     <nav
       className={`${styles.menu} ${props.isMenu ? styles.on : styles.off}`}
