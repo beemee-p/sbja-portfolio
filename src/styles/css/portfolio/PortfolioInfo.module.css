@@ -81,3 +81,15 @@
     opacity: 1;
   }
 }
+
+@media (max-width: 600px) {
+  .info_wrap {
+    min-width: calc(100% - 48px);
+    max-width: calc(100% - 48px);
+  }
+
+  .close {
+    right: -100%;
+    opacity: 1;
+  }
+}
