@@ -14,6 +14,8 @@ import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
 import { usePortfolioContext } from "@/components/portfolio/PortfolioContext";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
+import { useDeviceContext } from "../DeviceContext";
+import { HEADER_HEIGHT } from "@/utils/Constants";
 
 interface CursorPosition {
   x: number;
@@ -27,6 +29,7 @@ interface PortfolioMainProps {
 
 const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const context = usePortfolioContext();
+  const { isTablet, isMobile } = useDeviceContext();
   const [imgIndex, setImgIndex] = useState<number>(-1);
   const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
     x: 0,
@@ -36,19 +39,28 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {
       const scrollTop = document.querySelector(".modal-outer")?.scrollTop || 0;
+
+      if (isTablet || isMobile) {
+        setCursorPosition({
+          x: e.clientX,
+          y: e.clientY + scrollTop - HEADER_HEIGHT.TABLET,
+        });
+        return;
+      }
+
       setCursorPosition({
         x: e.clientX,
         y: e.clientY + scrollTop,
       });
     },
-    []
+    [isTablet, isMobile]
   );
 
   const mouseCursor = useMemo(() => {
     if (imgIndex >= 0) {
       return (
         <div
-          className={styles.cursor}
+          className={styles.cursor_tooltip}
           style={{
             left: `${cursorPosition.x}px`,
             top: `${cursorPosition.y}px`,
