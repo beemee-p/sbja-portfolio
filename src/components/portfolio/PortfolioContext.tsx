@@ -24,15 +24,15 @@ export const PortfolioProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const { isTablet } = useDeviceContext();
+  const { isPC } = useDeviceContext();
   const [showInfo, setShowInfo] = useState(true);
 
   useEffect(() => {
-    if (!isTablet) {
+    if (isPC) {
       return;
     }
     setShowInfo(false);
-  }, [isTablet]);
+  }, [isPC]);
 
   return (
     <PortfolioContext.Provider value={{ showInfo, setShowInfo }}>
