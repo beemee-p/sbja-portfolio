@@ -3,22 +3,11 @@
   flex-direction: row;
 }
 
-.modal_header {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   .modal_content_wrap {
     position: relative;
     padding: 0 0 80px 24px;
     background: #ffffff;
     overflow: hidden;
-  }
-
-  .modal_header {
-    display: block;
-    position: sticky;
-    top: 0;
-    z-index: 2;
   }
 }

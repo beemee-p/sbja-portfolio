@@ -20,9 +20,6 @@ const PortfolioModal = async ({
     <DeviceProvider>
       <PortfolioProvider>
         <Modal disableBodyScroll>
-          <div className={styles.modal_header}>
-            <Header />
-          </div>
           <div className={styles.modal_content_wrap}>
             <PortfolioMain portfolio={portfolio} />
             <PortfolioInfo contents={portfolio.contentHtml} />
