@@ -1,9 +1,9 @@
 "use client";
 import React, { ReactElement } from "react";
 import { IoCloseOutline } from "react-icons/io5";
-import Button from "../common/Button";
-import styles from "@/styles/css/portfolio/PortfolioInfo.module.css";
 import { usePortfolioContext } from "./PortfolioContext";
+import Button from "@/components/common/Button";
+import styles from "@/styles/css/portfolio/PortfolioInfo.module.css";
 
 interface PortfolioInfoProps {
   contents: string;
