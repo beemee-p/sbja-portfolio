@@ -7,12 +7,9 @@ import Link from "next/link";
 import Menu from "@/components/Menu";
 import styles from "@/styles/css/Header.module.css";
 import { useDeviceContext } from "./DeviceContext";
+import { PORTFOLIO_VIEW_TYPE } from "@/utils/Constants";
 
-interface HeaderProps {
-  isModal?: boolean;
-}
-
-const Header = (props: HeaderProps): ReactElement => {
+const Header = (): ReactElement => {
   const router = useRouter();
   const { portfolioID } = useParams();
   const { isMobile } = useDeviceContext();
@@ -24,14 +21,12 @@ const Header = (props: HeaderProps): ReactElement => {
   }
 
   return (
-    <header
-      className={`${styles.header} ${portfolioID ? styles.portfolio : ""}`}
-    >
+    <header className={`${styles.header}`}>
       {portfolioID && (
         <Link
           className={styles.back_btn}
           href="/"
-          onClick={(e) => props.isModal && handleMoveBack(e)}
+          onClick={(e) => portfolioID && handleMoveBack(e)}
         >
           <MdArrowBackIosNew size={"20"} />
         </Link>
@@ -41,7 +36,7 @@ const Header = (props: HeaderProps): ReactElement => {
         className={`${styles.logo} ${isMenu ? styles.on : styles.off}`}
         onClick={(e) => {
           isMenu && setIsMenu(false);
-          props.isModal && handleMoveBack(e);
+          portfolioID && handleMoveBack(e);
         }}
         href="/"
       >
@@ -63,7 +58,7 @@ const Header = (props: HeaderProps): ReactElement => {
       {isMenu && (
         <Menu
           isMenu={isMenu}
-          isModal={props.isModal}
+          isPortfolio={!!portfolioID}
           close={() => setIsMenu(false)}
         />
       )}

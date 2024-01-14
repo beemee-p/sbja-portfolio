@@ -12,7 +12,7 @@
   z-index: 101;
 }
 
-.portfolio {
+.modal_header {
   display: none;
 }
 
@@ -74,11 +74,12 @@
 
 @media (max-width: 1024px) {
   .header {
+    display: flex;
     padding: 10.5px 24px;
     width: calc(100% - 48px);
   }
 
-  .portfolio {
+  .modal_header {
     display: flex;
     position: fixed;
   }

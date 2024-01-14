@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 
 interface MenuProps {
   isMenu: boolean;
-  isModal?: boolean;
+  isPortfolio?: boolean;
   close: () => void;
 }
 
@@ -17,7 +17,7 @@ const Menu = (props: MenuProps): ReactElement => {
       title: "PORTFOLIO",
       linkProps: {
         onClick: (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-          props.isModal && handleMoveBack(e);
+          props.isPortfolio && handleMoveBack(e);
           handleMoveScroll(e);
         },
         href: "/",

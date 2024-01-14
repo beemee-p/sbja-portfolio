@@ -14,8 +14,9 @@ import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
 import { usePortfolioContext } from "@/components/portfolio/PortfolioContext";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
+import headerStyles from "@/styles/css/Header.module.css";
 import { useDeviceContext } from "../DeviceContext";
-import { HEADER_HEIGHT } from "@/utils/Constants";
+import { HEADER_HEIGHT, PORTFOLIO_VIEW_TYPE } from "@/utils/Constants";
 
 interface CursorPosition {
   x: number;
@@ -35,6 +36,23 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
     x: 0,
     y: 0,
   });
+
+  useEffect(() => {
+    const header = document.querySelector("header");
+    if (header) {
+      if (!isPage) {
+        header.classList.add(headerStyles.modal_header);
+      }
+    }
+
+    return () => {
+      if (header) {
+        if (!isPage) {
+          header.classList.remove(headerStyles.modal_header);
+        }
+      }
+    };
+  }, [isPage]);
 
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {
