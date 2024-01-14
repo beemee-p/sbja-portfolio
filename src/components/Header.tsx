@@ -1,13 +1,12 @@
 "use client";
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement, useState } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Menu from "@/components/Menu";
 import styles from "@/styles/css/Header.module.css";
-import { useDeviceContext } from "./DeviceContext";
-import { PORTFOLIO_VIEW_TYPE } from "@/utils/Constants";
+import { useDeviceContext } from "@/components/DeviceContext";
 
 const Header = (): ReactElement => {
   const router = useRouter();

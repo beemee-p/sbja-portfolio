@@ -1,9 +1,9 @@
 "use client";
 import React, { ReactElement } from "react";
 import { Portfolio } from "@/app/types";
-import { useDeviceContext } from "./DeviceContext";
-import Grid from "./common/Grid";
-import ListCard from "./ListCard";
+import { useDeviceContext } from "@/components/DeviceContext";
+import Grid from "@/components/common/Grid";
+import ListCard from "@/components/ListCard";
 
 interface ListProps {
   portfolios: Portfolio[];

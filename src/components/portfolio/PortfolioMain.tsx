@@ -9,14 +9,14 @@ import React, {
 import { GoInfo } from "react-icons/go";
 import { Portfolio } from "@/app/types";
 import Image from "next/image";
+import { useDeviceContext } from "@/components/DeviceContext";
+import { usePortfolioContext } from "@/components/portfolio/PortfolioContext";
 import Badge from "@/components/common/Badge";
 import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
-import { usePortfolioContext } from "@/components/portfolio/PortfolioContext";
+import { HEADER_HEIGHT } from "@/utils/Constants";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 import headerStyles from "@/styles/css/Header.module.css";
-import { useDeviceContext } from "../DeviceContext";
-import { HEADER_HEIGHT, PORTFOLIO_VIEW_TYPE } from "@/utils/Constants";
 
 interface CursorPosition {
   x: number;
