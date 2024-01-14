@@ -7,7 +7,7 @@ import React, {
   useEffect,
   useState,
 } from "react";
-import { useDeviceContext } from "../DeviceContext";
+import { useDeviceContext } from "@/components/DeviceContext";
 
 interface PortfolioContextType {
   showInfo: boolean;
@@ -24,15 +24,16 @@ export const PortfolioProvider = ({
 }: {
   children: React.ReactNode;
 }) => {
-  const { isPC } = useDeviceContext();
+  const { isMobile, isTablet, isPC } = useDeviceContext();
   const [showInfo, setShowInfo] = useState(true);
 
   useEffect(() => {
     if (isPC) {
-      return;
+      setShowInfo(true);
+    } else {
+      setShowInfo(false);
     }
-    setShowInfo(false);
-  }, [isPC]);
+  }, [isPC, isMobile, isTablet]);
 
   return (
     <PortfolioContext.Provider value={{ showInfo, setShowInfo }}>

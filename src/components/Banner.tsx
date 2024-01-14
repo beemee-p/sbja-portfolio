@@ -2,7 +2,7 @@
 import { ReactElement, useCallback, useEffect, useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import styles from "@/styles/css/Banner.module.css";
-import { useDeviceContext } from "./DeviceContext";
+import { useDeviceContext } from "@/components/DeviceContext";
 import { HEADER_HEIGHT } from "@/utils/Constants";
 
 const Banner = (): ReactElement => {
