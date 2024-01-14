@@ -41,10 +41,14 @@ const PortfolioDetail = async ({
   const portfolio = await getPortfolio(portfolioID);
 
   return (
-    <div className={styles.content_wrap}>
-      <PortfolioMain portfolio={portfolio} isPage />
-      <PortfolioInfo contents={portfolio.contentHtml} isPage />
-    </div>
+    <DeviceProvider>
+      <PortfolioProvider>
+        <div className={styles.content_wrap}>
+          <PortfolioMain portfolio={portfolio} isPage />
+          <PortfolioInfo contents={portfolio.contentHtml} isPage />
+        </div>
+      </PortfolioProvider>
+    </DeviceProvider>
   );
 };
 
