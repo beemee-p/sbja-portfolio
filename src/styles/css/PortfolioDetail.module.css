@@ -1,8 +1,25 @@
 .content_wrap {
+  position: relative;
   display: flex;
   flex-direction: row;
   max-width: 1600px;
   width: calc(100% - 160px);
   margin: 0 auto;
   padding: 35px 80px;
+}
+
+@media (max-width: 1024px) {
+  .content_wrap {
+    width: calc(100% - 24px);
+    margin: 0;
+    padding: 24px 0 60px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content_wrap {
+    width: calc(100% - 16px);
+    overflow: hidden;
+    padding: 0 0 60px 16px;
+  }
 }

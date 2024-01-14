@@ -104,9 +104,14 @@
 }
 
 @media (max-width: 1024px) {
+  .page {
+    border: none;
+  }
+
   .main_content {
     border-radius: 0;
     margin-right: 24px;
+    padding-bottom: 60px;
   }
 
   .close_info {

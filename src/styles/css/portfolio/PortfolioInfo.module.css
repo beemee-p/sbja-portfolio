@@ -76,6 +76,10 @@
     border-left: 1px solid #e4e4e4;
   }
 
+  .page {
+    top: 0;
+  }
+
   .close {
     right: -50%;
     opacity: 1;
