@@ -5,6 +5,7 @@ import Button from "./Button";
 import { FaPlay, FaPause } from "react-icons/fa6";
 
 const MOBILE_FILE_NAME = "-m.";
+const TABLET_FILE_NAME = "-tablet.";
 
 interface VideoPlayerProps {
   src?: string;
@@ -13,6 +14,7 @@ interface VideoPlayerProps {
 
 const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
   const isMobileVideo = props.src?.includes(MOBILE_FILE_NAME);
+  const isTabeltVideo = props.src?.includes(TABLET_FILE_NAME);
   const [isHover, setIsHover] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(
     props.index === 0 ? true : false
@@ -49,7 +51,7 @@ const VideoPlayer = (props: VideoPlayerProps): ReactElement => {
         style={{
           display: "block",
           pointerEvents: "none",
-          width: isMobileVideo ? "30%" : "100%",
+          width: isMobileVideo ? "30%" : isTabeltVideo ? "50%" : "100%",
           backgroundColor: "rgba(255, 255, 255, 0.03)",
         }}
       >
