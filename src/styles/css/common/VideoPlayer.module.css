@@ -2,6 +2,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  background: lightcyan;
 }
 
 .video_bg_wrap {
