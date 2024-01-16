@@ -25,7 +25,7 @@ export const PortfolioProvider = ({
   children: React.ReactNode;
 }) => {
   const { isMobile, isTablet, isPC } = useDeviceContext();
-  const [showInfo, setShowInfo] = useState(true);
+  const [showInfo, setShowInfo] = useState(false);
 
   useEffect(() => {
     if (isPC) {
