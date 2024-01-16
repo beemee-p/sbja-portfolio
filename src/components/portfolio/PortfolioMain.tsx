@@ -56,15 +56,11 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
 
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {
-      const scrollTop = document.querySelector(".modal-outer")?.scrollTop || 0;
-
       if (isTablet || isMobile) {
-        setCursorPosition({
-          x: e.clientX,
-          y: e.clientY + scrollTop - HEADER_HEIGHT.TABLET,
-        });
         return;
       }
+
+      const scrollTop = document.querySelector(".modal-outer")?.scrollTop || 0;
 
       setCursorPosition({
         x: e.clientX,
