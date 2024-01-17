@@ -8,15 +8,14 @@ import React, {
 } from "react";
 import { GoInfo } from "react-icons/go";
 import { Portfolio } from "@/app/types";
-import Image from "next/image";
 import { useDeviceContext } from "@/components/DeviceContext";
 import { usePortfolioContext } from "@/components/portfolio/PortfolioContext";
+import Image from "next/image";
 import Badge from "@/components/common/Badge";
 import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
-import { HEADER_HEIGHT } from "@/utils/Constants";
-import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 import headerStyles from "@/styles/css/Header.module.css";
+import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 
 interface CursorPosition {
   x: number;

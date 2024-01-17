@@ -1,8 +1,8 @@
 "use client";
-import React, { ReactElement, useEffect, useState } from "react";
-import styles from "@/styles/css/common/VideoPlayer.module.css";
-import Button from "./Button";
+import React, { ReactElement, useState } from "react";
 import { FaPlay, FaPause } from "react-icons/fa6";
+import Button from "@/components/common/Button";
+import styles from "@/styles/css/common/VideoPlayer.module.css";
 
 const MOBILE_FILE_NAME = "-m.";
 const TABLET_FILE_NAME = "-tablet.";
