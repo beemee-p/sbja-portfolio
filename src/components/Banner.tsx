@@ -1,13 +1,25 @@
 "use client";
-import { ReactElement, useCallback, useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
-import styles from "@/styles/css/Banner.module.css";
-import { useDeviceContext } from "@/components/DeviceContext";
+import Image, { StaticImageData } from "next/image";
+import { getRandomInt } from "@/utils/number";
 import { HEADER_HEIGHT } from "@/utils/Constants";
+import { useDeviceContext } from "@/components/DeviceContext";
+import styles from "@/styles/css/Banner.module.css";
+import banner1 from "public/videos/list/main-banner-1.gif";
+import banner2 from "public//videos/list/main-banner-2.gif";
+import banner3 from "public//videos/list/main-banner-3.gif";
 
 const Banner = (): ReactElement => {
   const { isMobile, isTablet } = useDeviceContext();
   const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT.PC);
+  const [randomImg, setRandomImg] = useState<string | StaticImageData>();
+  const imgs = [banner1, banner2, banner3];
+
+  useEffect(() => {
+    const randomNum = getRandomInt(0, 3);
+    setRandomImg(imgs[randomNum]);
+  }, []);
 
   useEffect(() => {
     if (isMobile) {
@@ -28,24 +40,21 @@ const Banner = (): ReactElement => {
 
   return (
     <section className={styles.banner}>
-      <video
-        id="background-video"
-        className={styles.video}
-        autoPlay
-        loop
-        muted
-        poster="https://assets.codepen.io/6093409/river.jpg"
-      >
-        <source
-          src="https://assets.codepen.io/6093409/river.mp4"
-          type="video/mp4"
+      {randomImg && (
+        <Image
+          className={styles.img}
+          alt="banner"
+          fill={true}
+          quality={60}
+          src={randomImg}
+          priority
         />
-      </video>
+      )}
 
       <h1 className={styles.title}>
-        Calm, Focus,
+        Take some
         <br />
-        and more Inspiration
+        Portfolios Today
         <br />
       </h1>
 
