@@ -4,8 +4,8 @@ import { getFormattedDate } from "@/library/getFormattedDate";
 import { Portfolio } from "@/app/types";
 import Link from "next/link";
 import Image from "next/image";
+import Badge from "@/components/common/Badge";
 import styles from "@/styles/css/ListCard.module.css";
-import Badge from "./common/Badge";
 
 interface ListCardProps {
   portfolio: Portfolio;
