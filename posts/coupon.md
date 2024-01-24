@@ -3,8 +3,8 @@ title: "Coupon System"
 date: "2021-01-02"
 thumbnail: "/images/coupon/coupon-download.png"
 skills: ["React", "Redux", "TypeScript", "Styled-components"]
-images: [
-    # { title: "💡쿠폰함 마이페이지 PC", img: "/images/coupon/coupon-pc.png" },
+images:
+  [
     {
       title: "💡쿠폰 다운로드 모달",
       img: "/images/coupon/coupon-download.png",
