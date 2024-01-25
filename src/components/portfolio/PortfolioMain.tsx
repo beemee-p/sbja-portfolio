@@ -15,6 +15,7 @@ import Badge from "@/components/common/Badge";
 import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
 import headerStyles from "@/styles/css/Header.module.css";
+import footerStyles from "@/styles/css/Footer.module.css";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 
 interface CursorPosition {
@@ -36,37 +37,22 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
     y: 0,
   });
 
-  useEffect(() => {
-    const header = document.querySelector("header");
-    if (header) {
-      if (!isPage) {
-        header.classList.add(headerStyles.modal_header);
-      }
-    }
-
-    return () => {
-      if (header) {
-        if (!isPage) {
-          header.classList.remove(headerStyles.modal_header);
-        }
-      }
-    };
-  }, [isPage]);
-
   const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
     (e) => {
       if (isTablet || isMobile) {
         return;
       }
 
-      const scrollTop = document.querySelector(".modal-outer")?.scrollTop || 0;
+      const container = isPage ? ".portfolio-content" : ".modal-outer";
+
+      const scrollTop = document.querySelector(container)?.scrollTop || 0;
 
       setCursorPosition({
         x: e.clientX,
         y: e.clientY + scrollTop,
       });
     },
-    [isTablet, isMobile]
+    [isTablet, isMobile, isPage]
   );
 
   const mouseCursor = useMemo(() => {

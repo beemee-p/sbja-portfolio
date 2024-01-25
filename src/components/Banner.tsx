@@ -1,5 +1,5 @@
 "use client";
-import { ReactElement, useEffect, useState } from "react";
+import { ReactElement, useEffect, useMemo, useState } from "react";
 import { SlArrowDown } from "react-icons/sl";
 import Image, { StaticImageData } from "next/image";
 import { getRandomInt } from "@/utils/number";
@@ -14,12 +14,15 @@ const Banner = (): ReactElement => {
   const { isMobile, isTablet } = useDeviceContext();
   const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT.PC);
   const [randomImg, setRandomImg] = useState<string | StaticImageData>();
-  const imgs = [banner1, banner2, banner3];
+
+  const imgs = useMemo(() => {
+    return [banner1, banner2, banner3];
+  }, []);
 
   useEffect(() => {
     const randomNum = getRandomInt(0, 3);
     setRandomImg(imgs[randomNum]);
-  }, []);
+  }, [imgs]);
 
   useEffect(() => {
     if (isMobile) {
