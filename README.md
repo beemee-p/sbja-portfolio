@@ -97,6 +97,7 @@
 1월 4주차
 - 모달 닫기 기능 버그 개선
 - 푸터 ui 업데이트
+- 메인화면의 큰 사이즈의 gif 를 webp 로 변환
 
 ## REF. 
 - [Vogue Korea](https://www.vogue.co.kr/)
