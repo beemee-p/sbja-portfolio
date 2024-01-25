@@ -43,9 +43,11 @@ const PortfolioDetail = async ({
   return (
     <DeviceProvider>
       <PortfolioProvider>
-        <div className={styles.content_wrap}>
-          <PortfolioMain portfolio={portfolio} isPage />
-          <PortfolioInfo contents={portfolio.contentHtml} isPage />
+        <div className={`portfolio-content ${styles.content_wrap}`}>
+          <div className={styles.content}>
+            <PortfolioMain portfolio={portfolio} isPage />
+            <PortfolioInfo contents={portfolio.contentHtml} isPage />
+          </div>
         </div>
       </PortfolioProvider>
     </DeviceProvider>
