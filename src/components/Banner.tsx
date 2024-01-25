@@ -6,9 +6,9 @@ import { getRandomInt } from "@/utils/number";
 import { HEADER_HEIGHT } from "@/utils/Constants";
 import { useDeviceContext } from "@/components/DeviceContext";
 import styles from "@/styles/css/Banner.module.css";
-import banner1 from "public/videos/list/main-banner-1.gif";
-import banner2 from "public//videos/list/main-banner-2.gif";
-import banner3 from "public//videos/list/main-banner-3.gif";
+import banner1 from "public/videos/list/main-banner-1.webp";
+import banner2 from "public/videos/list/main-banner-2.gif";
+import banner3 from "public/videos/list/main-banner-3.webp";
 
 const Banner = (): ReactElement => {
   const { isMobile, isTablet } = useDeviceContext();
