@@ -78,7 +78,7 @@
   }
 
   .page {
-    top: 0;
+    top: 69px;
   }
 
   .close {
@@ -91,6 +91,10 @@
   .info_wrap {
     min-width: calc(100% - 48px);
     max-width: calc(100% - 48px);
+  }
+
+  .page {
+    top: 52px;
   }
 
   .close {

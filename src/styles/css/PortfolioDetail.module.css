@@ -21,7 +21,7 @@
   .content {
     width: calc(100% - 24px);
     margin: 0;
-    padding: 92px 0 60px 24px;
+    padding: 68px 0 60px 24px;
   }
 }
 
@@ -29,6 +29,6 @@
   .content {
     width: calc(100% - 16px);
     overflow: hidden;
-    padding: 0 0 60px 16px;
+    padding: 52px 0 60px 16px;
   }
 }

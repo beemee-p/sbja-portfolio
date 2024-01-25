@@ -59,7 +59,7 @@
 @media (max-width: 1024px) {
   .modal_outer {
     /* HEADER_HEIGHT.TABLET */
-    top: 68px;
+    top: 69px;
   }
   .modal_inner {
     width: 100%;
