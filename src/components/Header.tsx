@@ -5,10 +5,15 @@ import { MdArrowBackIosNew } from "react-icons/md";
 import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Menu from "@/components/Menu";
-import styles from "@/styles/css/Header.module.css";
 import { useDeviceContext } from "@/components/DeviceContext";
+import { PAGE_TYPE } from "@/utils/Constants";
+import styles from "@/styles/css/Header.module.css";
 
-const Header = (): ReactElement => {
+interface HeaderProps {
+  pageType: PAGE_TYPE;
+}
+
+const Header = (props: HeaderProps): ReactElement => {
   const router = useRouter();
   const { portfolioID } = useParams();
   const { isMobile } = useDeviceContext();
