@@ -94,6 +94,10 @@
 - 배경영상 업데이트 (브라우저 오픈 혹은 새로고침시 랜덤재생기능 추가)
 - 포트폴리오 데이터 추가 업데이트
 
+1월 4주차
+- 모달 닫기 기능 버그 개선
+- 푸터 ui 업데이트
+
 ## REF. 
 - [Vogue Korea](https://www.vogue.co.kr/)
 - [Dribble](https://dribbble.com/)
