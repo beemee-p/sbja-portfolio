@@ -19,6 +19,7 @@
 
 .close {
   opacity: 0;
+  margin-left: 20%;
 }
 
 .info_close_btn {
