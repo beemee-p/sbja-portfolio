@@ -12,10 +12,6 @@
   z-index: 101;
 }
 
-.modal_header {
-  display: none;
-}
-
 .logo {
   color: #000000;
   font-weight: 500;
