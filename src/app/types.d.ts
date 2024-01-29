@@ -1,6 +1,6 @@
 export type PortfolioImage = Record<"title" | "img", string>;
 
-export type Portfolio = {
+export interface Portfolio {
   id: string;
   title: string;
   date: string;
@@ -8,4 +8,4 @@ export type Portfolio = {
   skills?: string[];
   images?: PortfolioImage[];
   videos?: string[];
-};
+}
