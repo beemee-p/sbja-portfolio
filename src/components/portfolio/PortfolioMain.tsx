@@ -14,8 +14,6 @@ import Image from "next/image";
 import Badge from "@/components/common/Badge";
 import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
-import headerStyles from "@/styles/css/Header.module.css";
-import footerStyles from "@/styles/css/Footer.module.css";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 
 interface CursorPosition {
