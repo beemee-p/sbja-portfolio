@@ -2,7 +2,6 @@
 import React, {
   MouseEventHandler,
   useCallback,
-  useEffect,
   useMemo,
   useState,
 } from "react";
@@ -15,11 +14,10 @@ import Badge from "@/components/common/Badge";
 import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
+import Tooltip from "../common/Tooltip";
+import { useThrottle } from "@/hooks/useThrottle";
 
-interface CursorPosition {
-  x: number;
-  y: number;
-}
+const SECOND_PER_FRAME = 16.6;
 
 interface PortfolioMainProps {
   portfolio: Portfolio;
@@ -29,47 +27,27 @@ interface PortfolioMainProps {
 const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
   const context = usePortfolioContext();
   const { isMobile, isTablet } = useDeviceContext();
+  const [isHover, setIsHover] = useState(false);
   const [imgIndex, setImgIndex] = useState<number>(-1);
-  const [cursorPosition, setCursorPosition] = useState<CursorPosition>({
-    x: 0,
-    y: 0,
-  });
 
-  const handleMouseMove: MouseEventHandler<HTMLDivElement> = useCallback(
+  const handleMouseMove: MouseEventHandler<HTMLUListElement> = useCallback(
     (e) => {
       if (isTablet || isMobile) {
         return;
       }
 
       const container = isPage ? ".portfolio-content" : ".modal-outer";
-
       const scrollTop = document.querySelector(container)?.scrollTop || 0;
-
-      setCursorPosition({
-        x: e.clientX,
-        y: e.clientY + scrollTop,
-      });
+      const tooltip = document.querySelector(".tooltip") as HTMLElement;
+      if (tooltip) {
+        tooltip.style.left = `${e.clientX}px`;
+        tooltip.style.top = `${e.clientY + scrollTop}px`;
+      }
     },
     [isTablet, isMobile, isPage]
   );
 
-  const mouseCursor = useMemo(() => {
-    if (imgIndex >= 0) {
-      return (
-        <div
-          className={styles.cursor_tooltip}
-          style={{
-            left: `${cursorPosition.x}px`,
-            top: `${cursorPosition.y}px`,
-          }}
-        >
-          {props.portfolio.images?.[imgIndex || 0].title}
-        </div>
-      );
-    } else {
-      return null;
-    }
-  }, [imgIndex, cursorPosition, props.portfolio.images]);
+  const throttleMouseMove = useThrottle(handleMouseMove, SECOND_PER_FRAME);
 
   return (
     <section
@@ -77,7 +55,6 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
       className={`${styles.main_content} ${isPage ? styles.page : ""} ${
         context.showInfo ? styles.open_info : styles.close_info
       }`}
-      onMouseMove={handleMouseMove}
     >
       <article className={styles.main_head_wrap}>
         <div className={styles.main_head}>
@@ -106,7 +83,12 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
         ))}
       </article>
 
-      <ul className={styles.main_image_wrap}>
+      <ul
+        className={styles.main_image_wrap}
+        onMouseMove={throttleMouseMove}
+        onMouseEnter={() => setIsHover(true)}
+        onMouseLeave={() => setIsHover(false)}
+      >
         {props.portfolio.images?.map((image, index) => (
           <li
             className={styles.main_image}
@@ -129,7 +111,9 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
         ))}
       </ul>
 
-      {mouseCursor}
+      {isHover && imgIndex >= 0 && (
+        <Tooltip>{props.portfolio.images?.[imgIndex || 0].title}</Tooltip>
+      )}
     </section>
   );
 };
