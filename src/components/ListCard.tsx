@@ -1,5 +1,5 @@
 "use client";
-import { ReactElement } from "react";
+import { ReactElement, memo } from "react";
 import { getFormattedDate } from "@/library/getFormattedDate";
 import { Portfolio } from "@/app/types";
 import Link from "next/link";
@@ -49,4 +49,4 @@ const ListCard = (props: ListCardProps): ReactElement => {
   );
 };
 
-export default ListCard;
+export default memo(ListCard);
