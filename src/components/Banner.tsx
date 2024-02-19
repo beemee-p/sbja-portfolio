@@ -6,23 +6,22 @@ import { getRandomInt } from "@/utils/number";
 import { HEADER_HEIGHT } from "@/utils/Constants";
 import { useDeviceContext } from "@/components/DeviceContext";
 import styles from "@/styles/css/Banner.module.css";
-import banner1 from "public/videos/list/main-banner-1.webp";
-import banner2 from "public/videos/list/main-banner-2.gif";
-import banner3 from "public/videos/list/main-banner-3.webp";
+
+const imgs: StaticImageData[] | string[] = [
+  "/videos/list/main-banner-1.webm",
+  "/videos/list/main-banner-2.webm",
+  "/videos/list/main-banner-3.webm",
+];
 
 const Banner = (): ReactElement => {
   const { isMobile, isTablet } = useDeviceContext();
   const [headerHeight, setHeaderHeight] = useState(HEADER_HEIGHT.PC);
-  const [randomImg, setRandomImg] = useState<string | StaticImageData>();
-
-  const imgs = useMemo(() => {
-    return [banner1, banner2, banner3];
-  }, []);
+  const [randomImg, setRandomImg] = useState<StaticImageData | string>();
 
   useEffect(() => {
     const randomNum = getRandomInt(0, 3);
     setRandomImg(imgs[randomNum]);
-  }, [imgs]);
+  }, []);
 
   useEffect(() => {
     if (isMobile) {
@@ -44,16 +43,18 @@ const Banner = (): ReactElement => {
   return (
     <section className={styles.banner}>
       {randomImg && (
-        <Image
-          className={styles.img}
-          alt="banner"
-          fill={true}
-          quality={60}
-          src={randomImg}
-          priority
-        />
+        <video
+          className={styles.video}
+          muted
+          autoPlay
+          playsInline
+          loop
+          preload="metadata"
+        >
+          <source src={randomImg as string} type="video/webm" />
+          Your browser does not support the video tag.
+        </video>
       )}
-
       <h1 className={styles.title}>
         Take some
         <br />
