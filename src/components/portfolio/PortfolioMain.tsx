@@ -1,10 +1,5 @@
 "use client";
-import React, {
-  MouseEventHandler,
-  useCallback,
-  useMemo,
-  useState,
-} from "react";
+import React, { MouseEventHandler, useCallback, useState } from "react";
 import { GoInfo } from "react-icons/go";
 import { Portfolio } from "@/app/types";
 import { useDeviceContext } from "@/components/DeviceContext";
@@ -15,9 +10,6 @@ import Button from "@/components/common/Button";
 import VideoPlayer from "@/components/common/VideoPlayer";
 import styles from "@/styles/css/portfolio/PortfolioMain.module.css";
 import Tooltip from "../common/Tooltip";
-import { useThrottle } from "@/hooks/useThrottle";
-
-const SECOND_PER_FRAME = 16.6;
 
 interface PortfolioMainProps {
   portfolio: Portfolio;
@@ -46,8 +38,6 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
     },
     [isTablet, isMobile, isPage]
   );
-
-  const throttleMouseMove = useThrottle(handleMouseMove, SECOND_PER_FRAME);
 
   return (
     <section
@@ -85,7 +75,7 @@ const PortfolioMain = ({ isPage = false, ...props }: PortfolioMainProps) => {
 
       <ul
         className={styles.main_image_wrap}
-        onMouseMove={throttleMouseMove}
+        onMouseMove={handleMouseMove}
         onMouseEnter={() => setIsHover(true)}
         onMouseLeave={() => setIsHover(false)}
       >
